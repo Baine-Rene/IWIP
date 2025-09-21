@@ -1,9 +1,10 @@
-import { Hero47 } from "@/components/hero";
-
+import { Hero } from "@/components/hero";
+import { Navbar } from "@/components/navigation";
 export default function Home() {
   return (
     <>
-      <Hero47 />
+      <Navbar />
+      <Hero />
     </>
   );
 }
