@@ -31,7 +31,7 @@ const Navbar = () => {
           <NavigationMenu className="hidden md:block">
             <NavigationMenuList className="gap-3 space-x-0">
               {navigationItems.map((item) => (
-                <NavigationMenuItem key={item.title}>
+                <NavigationMenuItem key={item.title} className="font-bold">
                   <NavigationMenuLink asChild>
                     <Link href={item.href}>
                       {item.title}

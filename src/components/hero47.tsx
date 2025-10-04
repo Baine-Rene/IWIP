@@ -1,5 +1,5 @@
 import { ArrowUpRight } from "lucide-react";
-
+import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 
@@ -24,33 +24,28 @@ interface Hero47Props {
 }
 
 const Hero47 = ({
-    heading = "Reworking",
-    subheading = " built with shadcn/ui & Tailwind",
-    description = "Finely crafted components built with React, Tailwind and Shadcn UI. Developers can copy and paste these blocks directly into their project.",
+    heading = "Reworking Networking With Digital Business Cards",
+    description = "Designed to empower young people by fostering the right mindset, building leadership skills, and nurturing entrepreneurial thinking to help them unlock their potential and shape their future.",
     buttons = {
         primary: {
-            text: "Get Started",
-            url: "#",
-        },
-        secondary: {
-            text: "Read the docs",
+            text: "Join Now",
             url: "#",
         },
     },
     image = {
-        src: "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/placeholder-dark-7-tall.svg",
+        src: "images/showcase.svg",
         alt: "Placeholder",
     },
 }: Hero47Props) => {
     return (
-        <section className="bg-background py-20 lg:py-32">
-            <div className="container flex flex-col items-center gap-10 lg:my-0 lg:flex-row">
-                <div className="flex flex-col gap-7 lg:w-2/3">
-                    <h2 className="text-5xl font-semibold text-foreground md:text-5xl lg:text-8xl">
+        <section className="w-full pt-32 bg-blue-700">
+            <div className="container flex flex-col items-center lg:my-0 lg:flex-row lg:justify-center lg:gap-8 mx-auto max-w-7xl lg:px-24">
+                <div className="flex flex-col items-center lg:items-start gap-5 lg:flex-1">
+                    <Badge variant="secondary">We&apos;re live!</Badge>
+                    <h1 className="text-white text-5xl md:text-7xl max-w-2xl tracking-tighter font-semibold text-center lg:text-left">
                         <span>{heading}</span>
-                        <span className="text-muted-foreground">{subheading}</span>
-                    </h2>
-                    <p className="text-base text-muted-foreground md:text-lg lg:text-xl">
+                    </h1>
+                    <p className="text-lg md:text-xl leading-relaxed tracking-tight text-white max-w-2xl text-center lg:text-left">
                         {description}
                     </p>
                     <div className="flex flex-wrap items-start gap-5 lg:gap-7">
@@ -64,28 +59,32 @@ const Hero47 = ({
                                 </span>
                             </a>
                         </Button>
-                        <Button asChild variant="link" className="underline">
-                            <a href={buttons.secondary?.url}>{buttons.secondary?.text}</a>
-                        </Button>
+                        {buttons.secondary?.text && (
+                            <Button asChild variant="link" className="underline">
+                                <a href={buttons.secondary?.url}>{buttons.secondary?.text}</a>
+                            </Button>
+                        )}
                     </div>
                 </div>
-                <div className="relative z-10">
-                    <div className="absolute top-2.5 left-1/2! h-[92%]! w-[69%]! -translate-x-[52%] overflow-hidden rounded-[35px]">
+                <div className="relative z-10 lg:flex-1 flex justify-center lg:justify-end mt-12 lg:mt-0">
+                    <div className="relative">
+                        <div className="absolute top-2.5 left-1/2 h-[92%] w-[69%] -translate-x-[52%] overflow-hidden rounded-[35px]">
+                            <Image
+                                src={image.src}
+                                alt={image.alt}
+                                width={450}
+                                height={889}
+                                className="size-full object-cover object-[50%_0%]"
+                            />
+                        </div>
                         <Image
-                            src={image.src}
-                            alt={image.alt}
+                            className="relative z-10"
+                            src="https://deifkwefumgah.cloudfront.net/shadcnblocks/block/mockups/phone-2.png"
                             width={450}
                             height={889}
-                            className="size-full object-cover object-[50%_0%]"
+                            alt="iphone"
                         />
                     </div>
-                    <Image
-                        className="relative z-10"
-                        src="https://deifkwefumgah.cloudfront.net/shadcnblocks/block/mockups/phone-2.png"
-                        width={450}
-                        height={889}
-                        alt="iphone"
-                    />
                 </div>
             </div>
         </section>
