@@ -18,7 +18,7 @@ const Features01 = () => {
     <div className="min-h-screen flex items-center justify-center py-12 px-6">
       <div className="grow w-full sm:max-w-(--breakpoint-md) lg:max-w-(--breakpoint-lg)">
         <h2 className="text-4xl sm:text-5xl font-semibold tracking-tight">
-          Ignite Your Imagination
+          Powered by the YoungEye Initiative
         </h2>
         <div className="w-full mt-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-12">
           {features.map((feature) => (

@@ -1,56 +1,83 @@
-import { Check, PhoneCall } from "lucide-react";
-import { Badge } from "@/components/ui/badge";
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
-  AccordionTrigger,
 } from "@/components/ui/accordion";
-import { Button } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
+import * as AccordionPrimitive from "@radix-ui/react-accordion";
+import { PlusIcon } from "lucide-react";
 
-export const FAQ1 = () => (
-  <div className="w-full py-20 lg:py-40">
-    <div className="container mx-auto">
-      <div className="grid lg:grid-cols-2 gap-10">
-        <div className="flex gap-10 flex-col">
-          <div className="flex gap-4 flex-col">
-            <div>
-              <Badge variant="outline">FAQ</Badge>
-            </div>
-            <div className="flex gap-2 flex-col">
-              <h4 className="text-3xl md:text-5xl tracking-tighter max-w-xl text-left font-regular">
-                This is the start of something new
-              </h4>
-              <p className="text-lg max-w-xl lg:max-w-lg leading-relaxed tracking-tight text-muted-foreground  text-left">
-                Managing a small business today is already tough. Avoid further
-                complications by ditching outdated, tedious trade methods. Our
-                goal is to streamline SMB trade, making it easier and faster
-                than ever.
-              </p>
-            </div>
-            <div className="">
-              <Button className="gap-4" variant="outline">
-                Any questions? Reach out <PhoneCall className="w-4 h-4" />
-              </Button>
-            </div>
-          </div>
-        </div>
-        <Accordion type="single" collapsible className="w-full">
-          {Array.from({ length: 8 }).map((_, index) => (
-            <AccordionItem key={index} value={"index-" + index}>
-              <AccordionTrigger>
-                This is the start of something new
-              </AccordionTrigger>
-              <AccordionContent>
-                Managing a small business today is already tough. Avoid further
-                complications by ditching outdated, tedious trade methods. Our
-                goal is to streamline SMB trade, making it easier and faster
-                than ever.
+const faq = [
+  {
+    question: "What is your return policy?",
+    answer:
+      "You can return unused items in their original packaging within 30 days for a refund or exchange. Contact support for assistance.",
+  },
+  {
+    question: "How do I track my order?",
+    answer:
+      "Track your order using the link provided in your confirmation email, or log into your account to view tracking details.",
+  },
+  {
+    question: "Do you ship internationally?",
+    answer:
+      "Yes, we ship worldwide. Shipping fees and delivery times vary by location, and customs duties may apply for some countries.",
+  },
+  {
+    question: "What payment methods do you accept?",
+    answer:
+      "We accept Visa, MasterCard, American Express, PayPal, Apple Pay, and Google Pay, ensuring secure payment options for all customers.",
+  },
+  {
+    question: "What if I receive a damaged item?",
+    answer:
+      "Please contact our support team within 48 hours of delivery with photos of the damaged item. We’ll arrange a replacement or refund.",
+  },
+];
+
+const FAQ = () => {
+  return (
+    <div className="bg-blue-700 min-h-screen flex items-center justify-center px-6 py-12">
+      <div className="w-full max-w-2xl">
+        <h2 className="text-4xl md:text-5xl leading-[1.15]! font-bold tracking-tighter text-white">
+          Frequently Asked Questions
+        </h2>
+        <p className="mt-2 text-xl text-muted-foreground text-white">
+          Quick answers to common questions about our products and services.
+        </p>
+
+        <Accordion
+          type="single"
+          collapsible
+          className="mt-8 sm:mt-10 space-y-4"
+          defaultValue="question-0"
+        >
+          {faq.map(({ question, answer }, index) => (
+            <AccordionItem
+              key={question}
+              value={`question-${index}`}
+              className="bg-accent py-1 px-4 rounded-xl border-none"
+            >
+              <AccordionPrimitive.Header className="flex">
+                <AccordionPrimitive.Trigger
+                  className={cn(
+                    "flex flex-1 items-center justify-between pt-4 pb-3 font-semibold tracking-tight transition-all hover:underline [&[data-state=open]>svg]:rotate-45",
+                    "text-start text-lg"
+                  )}
+                >
+                  {question}
+                  <PlusIcon className="h-5 w-5 shrink-0 text-muted-foreground transition-transform duration-200" />
+                </AccordionPrimitive.Trigger>
+              </AccordionPrimitive.Header>
+              <AccordionContent className="text-base text-muted-foreground">
+                {answer}
               </AccordionContent>
             </AccordionItem>
           ))}
         </Accordion>
       </div>
     </div>
-  </div>
-);
+  );
+};
+
+export default FAQ;
