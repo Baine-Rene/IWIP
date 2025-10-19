@@ -5,14 +5,14 @@ import Link from "next/link";
 
 const teamMembers = [
   {
-    name: "Darren Baine",
+    name: "John Doe",
     title: "Founder & CEO",
-    bio: "Former co-founder of Opendoor. Early staff at Spotify.",
+    bio: "Former co-founder of Opendoor. Early staff at Spotify and Clearbit.",
     imageUrl:
       "https://images.pexels.com/photos/3785079/pexels-photo-3785079.jpeg?auto=compress&cs=tinysrgb&w=600",
   },
   {
-    name: "Felix Odong",
+    name: "Jane Doe",
     title: "Engineering Manager",
     bio: "Lead engineering teams at Figma, Pitch, and Protocol Labs.",
     imageUrl:
@@ -46,23 +46,37 @@ const teamMembers = [
     imageUrl:
       "https://images.pexels.com/photos/733872/pexels-photo-733872.jpeg?auto=compress&cs=tinysrgb&w=600",
   },
+  {
+    name: "Michael Brown",
+    title: "UX Researcher",
+    bio: "Lead user research for Slack. Contractor for Netflix and Udacity.",
+    imageUrl:
+      "https://images.pexels.com/photos/1681010/pexels-photo-1681010.jpeg?auto=compress&cs=tinysrgb&w=600",
+  },
+  {
+    name: "Elizabeth Johnson",
+    title: "Customer Success",
+    bio: "Lead CX at Wealthsimple. Former PagerDuty and Sqreen.",
+    imageUrl:
+      "https://images.pexels.com/photos/2613260/pexels-photo-2613260.jpeg?auto=compress&cs=tinysrgb&w=600",
+  },
 ];
 
 const Team = () => {
   return (
-    <div className="flex flex-col lg:flex-row justify-center py-8 sm:py-16 px-6 lg:px-8 max-w-(--breakpoint-xl) mx-auto gap-14">
-      <div className="sm:max-w-sm lg:max-w-xs">
-        <b className="text-muted-foreground font-semibold text-sm uppercase">
-          Our team
+    <div className="flex flex-col justify-center py-8 sm:py-16 px-6 lg:px-8 max-w-(--breakpoint-xl) mx-auto gap-16">
+      <div className="text-center max-w-2xl mx-auto">
+        <b className="text-center text-muted-foreground text-sm font-semibold uppercase">
+          We&apos;re hiring!
         </b>
-        <h2 className="mt-3 text-3xl md:text-4xl font-semibold tracking-tighter">
-          Leadership Team
+        <h2 className="mt-3 text-4xl sm:text-5xl font-semibold tracking-tighter">
+          Meet Our Team
         </h2>
-        <p className="mt-4 text-base sm:text-lg">
-          We&apos;re a cross-disciplinary team that loves to create great
-          experiences for our customers.
+        <p className="mt-6 text-base sm:text-lg text-muted-foreground">
+          Our philosophy is simple — hire a team of diverse, passionate people
+          and foster a culture that empowers you to do you best work.
         </p>
-        <div className="mt-8 flex flex-col sm:flex-row-reverse sm:justify-end gap-3">
+        <div className="mt-8 flex flex-col sm:flex-row-reverse sm:justify-center gap-3">
           <Button size="lg">Open Positions</Button>
           <Button size="lg" variant="outline">
             About Us
@@ -70,49 +84,32 @@ const Team = () => {
         </div>
       </div>
 
-      <div className="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-x-10 gap-y-12">
+      <div className="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-10 gap-y-12">
         {teamMembers.map((member) => (
-          <div key={member.name} className="flex items-start md:flex-col gap-4">
+          <div
+            key={member.name}
+            className="flex flex-col items-center text-center bg-accent py-8 px-6 rounded-lg"
+          >
             <Image
               src={member.imageUrl}
               alt={member.name}
-              className="shrink-0 h-16 w-16 sm:h-20 sm:w-20 rounded-full object-cover bg-secondary"
+              className="shrink-0 h-16 w-16 sm:h-20 sm:w-20 rounded-full object-cover bg-accent"
               width={120}
               height={120}
             />
-            <div>
-              <h3 className="text-lg font-semibold">{member.name}</h3>
-              <p className="text-muted-foreground text-sm">{member.title}</p>
-              <p className="mt-2">{member.bio}</p>
-              <div className="mt-4 flex items-center gap-2.5">
-                <Button
-                  className="bg-accent hover:bg-accent shadow-none"
-                  size="icon"
-                  asChild
-                >
-                  <Link href="#" target="_blank">
-                    <TwitterIcon className="stroke-muted-foreground" />
-                  </Link>
-                </Button>
-                <Button
-                  className="bg-accent hover:bg-accent shadow-none"
-                  size="icon"
-                  asChild
-                >
-                  <Link href="#" target="_blank">
-                    <DribbbleIcon className="stroke-muted-foreground" />
-                  </Link>
-                </Button>
-                <Button
-                  className="bg-accent hover:bg-accent shadow-none"
-                  size="icon"
-                  asChild
-                >
-                  <Link href="#" target="_blank">
-                    <TwitchIcon className="stroke-muted-foreground" />
-                  </Link>
-                </Button>
-              </div>
+            <h3 className="mt-5 text-lg font-semibold">{member.name}</h3>
+            <p className="text-muted-foreground text-sm">{member.title}</p>
+            <p className="mt-2 mb-6 text-pretty">{member.bio}</p>
+            <div className="mt-auto flex items-center gap-4">
+              <Link href="#" target="_blank">
+                <TwitterIcon className="stroke-muted-foreground h-5 w-5" />
+              </Link>
+              <Link href="#" target="_blank">
+                <DribbbleIcon className="stroke-muted-foreground h-5 w-5" />
+              </Link>
+              <Link href="#" target="_blank">
+                <TwitchIcon className="stroke-muted-foreground h-5 w-5" />
+              </Link>
             </div>
           </div>
         ))}

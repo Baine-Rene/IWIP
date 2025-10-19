@@ -16,14 +16,10 @@ interface Hero {
             text: string;
             url: string;
         };
-        secondary?: {
-            text: string;
-            url: string;
-        };
     };
 }
 
-const Hero= ({
+const Hero = ({
     heading = "Reworking Networking With Digital Business Cards",
     description = "Designed to empower young people by fostering the right mindset, building leadership skills, and nurturing entrepreneurial thinking to help them unlock their potential and shape their future.",
     buttons = {
@@ -38,7 +34,7 @@ const Hero= ({
     },
 }: Hero) => {
     return (
-        <section className="w-full pt-32 bg-primary">
+        <section className="w-full pt-32 bg-primary py-12">
             <div className="container flex flex-col items-center lg:my-0 lg:flex-row lg:justify-center lg:gap-8 mx-auto max-w-7xl lg:px-24">
                 <div className="flex flex-col items-center md:p-0 px-10  lg:items-start gap-5 lg:flex-1">
                     <Badge className="bg-green-600 text-white" variant="secondary">We&apos;re live!</Badge>
@@ -49,24 +45,20 @@ const Hero= ({
                         {description}
                     </p>
                     <div className="flex flex-wrap items-start gap-5 lg:gap-7">
-                        <Button asChild>
+                        <Button asChild className="bg-blue-700 hover:bg-blue-900 ">
                             <a href={buttons.primary?.url}>
-                                <div className="flex items-center gap-2">
-                                    <ArrowUpRight className="size-4" />
-                                </div>
                                 <span className="pr-6 pl-4 text-sm whitespace-nowrap lg:pr-8 lg:pl-6 lg:text-base">
                                     {buttons.primary?.text}
                                 </span>
+                                <div className="flex items-center gap-2">
+                                    <ArrowUpRight className="size-4" />
+                                </div>
                             </a>
                         </Button>
-                        {buttons.secondary?.text && (
-                            <Button asChild variant="link" className="underline">
-                                <a href={buttons.secondary?.url}>{buttons.secondary?.text}</a>
-                            </Button>
-                        )}
                     </div>
                 </div>
-                
+
+                {/* Mock up image */}
                 <div className="relative z-10 lg:flex-1 flex justify-center lg:justify-end mt-12 lg:mt-0">
                     <div className="relative">
                         <div className="absolute top-2.5 left-1/2 h-[92%] w-[69%] -translate-x-[52%] overflow-hidden rounded-[35px]">

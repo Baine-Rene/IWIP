@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "IWIP",
+  title: "IWIP - Inspired Work In Progress",
   description: "Reworking Networking With Digital Business Cards",
 };
 

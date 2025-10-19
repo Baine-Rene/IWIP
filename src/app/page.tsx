@@ -12,6 +12,7 @@ export default function Home() {
       <Hero/>
       <Features/>
       <FAQ/>
+      <Team/>
       <Footer/>
     </>
   );
