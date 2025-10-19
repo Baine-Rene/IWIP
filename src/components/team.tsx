@@ -5,14 +5,14 @@ import Link from "next/link";
 
 const teamMembers = [
   {
-    name: "John Doe",
+    name: "Darren Baine",
     title: "Founder & CEO",
     bio: "Former co-founder of Opendoor. Early staff at Spotify.",
     imageUrl:
       "https://images.pexels.com/photos/3785079/pexels-photo-3785079.jpeg?auto=compress&cs=tinysrgb&w=600",
   },
   {
-    name: "Jane Doe",
+    name: "Felix Odong",
     title: "Engineering Manager",
     bio: "Lead engineering teams at Figma, Pitch, and Protocol Labs.",
     imageUrl:
