@@ -1,7 +1,4 @@
 import { Download, Monitor, Smartphone, Tablet } from "lucide-react";
-import Image from "next/image";
-
-
 import { Button } from "@/components/ui/button";
 
 interface Download2Props {
@@ -31,8 +28,8 @@ interface Download2Props {
 }
 
 const Download2 = ({
-    heading = "Available Everywhere",
-    description = "Choose your platform and start using our app right away. Available on all major devices and operating systems.",
+    heading = "Coming Soon",
+    description = "The IWIP app Will be available on all major devices and operating systems soon.",
     platforms = {
         desktop: {
             title: "Desktop",
@@ -56,14 +53,14 @@ const Download2 = ({
     },
 }: Download2Props) => {
     return (
-        <section className="bg-muted/50 py-32">
-            <div className="container">
+        <section className="bg-muted py-32">
+            <div className="flex flex-col justify-center px-6 lg:px-8 max-w-(--breakpoint-xl) mx-auto gap-16">
                 {/* Header Section */}
-                <div className="mb-20 text-center">
+                <div className="max-w-2xl mx-auto text-center">
                     <h2 className="mb-6 text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl">
                         {heading}
                     </h2>
-                    <p className="text-muted-foreground mx-auto mb-12 max-w-2xl text-lg">
+                    <p className="text-muted-foreground mx-auto mb-6 max-w-2xl text-lg">
                         {description}
                     </p>
                 </div>
@@ -81,12 +78,6 @@ const Download2 = ({
                         <p className="text-muted-foreground mb-6 text-sm">
                             {platforms.desktop?.description}
                         </p>
-                        <Button size="lg" asChild>
-                            <a href={platforms.desktop?.url}>
-                                <Download className="h-4 w-4" />
-                                {platforms.desktop?.buttonText}
-                            </a>
-                        </Button>
                     </div>
 
                     {/* iOS */}
@@ -101,11 +92,6 @@ const Download2 = ({
                             {platforms.ios?.description}
                         </p>
                         <a href={platforms.ios?.url} className="mx-auto block w-fit">
-                            <Image
-                                src="https://deifkwefumgah.cloudfront.net/shadcnblocks/block/badges/appstore.png"
-                                alt="Download on the App Store"
-                                className="h-10"
-                            />
                         </a>
                     </div>
 
@@ -121,13 +107,6 @@ const Download2 = ({
                             {platforms.android?.description}
                         </p>
                         <a href={platforms.android?.url} className="mx-auto block w-fit">
-                            <Image
-                                src="https://deifkwefumgah.cloudfront.net/shadcnblocks/block/badges/googleplay.png"
-                                alt="Get it on Google Play"
-                                className="h-10"
-                                width={256}
-                                height={256}
-                            />
                         </a>
                     </div>
                 </div>

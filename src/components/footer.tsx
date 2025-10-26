@@ -57,7 +57,7 @@ const footerSections = [
     title: "Legal",
     links: [
       {
-        title: "Terms",
+        title: "Disclaimer",
         href: "#",
       },
       {
