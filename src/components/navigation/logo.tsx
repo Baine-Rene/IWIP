@@ -8,4 +8,5 @@ export const Logo = () => (
     height={256}
     className="h-8 w-auto" // Tailwind example for sizing
   />
+  
 );
