@@ -11,33 +11,21 @@ import React from "react";
 const features = [
   {
     icon: Settings2,
-    title: "Customizable Layouts",
+    title: "A new way to build your network",
     description:
-      "Design your space with drag-and-drop simplicity—create grids, lists, or galleries in seconds.",
+      "Say goodbye to outdated business cards.",
   },
   {
     icon: Blocks,
-    title: "Interactive Widgets",
+    title: "Connect with others",
     description:
-      "Embed polls, quizzes, or forms to keep your audience engaged.",
+      "Network with purpose, not just by chance.",
   },
   {
     icon: Bot,
-    title: "AI-Powered Tools",
+    title: "Grow you professional network",
     description:
-      "Generate summaries, auto-format content, or translate into multiple languages seamlessly.",
-  },
-  {
-    icon: Film,
-    title: "Media Integrations",
-    description:
-      "Connect with Spotify, Instagram, or your own media library for dynamic visuals and sound.",
-  },
-  {
-    icon: ChartPie,
-    title: "Advanced Analytics",
-    description:
-      "Track engagement, clicks, and user activity with intuitive charts and reports.",
+      "Share your entire professional presence in seconds.",
   },
   {
     icon: MessageCircle,
@@ -47,24 +35,24 @@ const features = [
   },
 ];
 
-const Features01Page = () => {
+const Features02 = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center py-12">
+    <div className="bg-primary min-h-screen flex items-center justify-center py-12">
       <div>
-        <h2 className="text-4xl sm:text-5xl font-semibold tracking-tight text-center">
-          Unleash Your Creativity
+        <h2 className="text-4xl sm:text-5xl font-bold tracking-tight text-center text-white">
+          Why choose IWIP?
         </h2>
-        <div className="mt-10 sm:mt-16 grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-(--breakpoint-lg) mx-auto px-6">
+        <div className="mt-10 sm:mt-16 grid sm:grid-cols-2 lg:grid-cols-2 gap-6 max-w-(--breakpoint-lg) mx-auto px-6">
           {features.map((feature) => (
             <div
               key={feature.title}
-              className="flex flex-col border rounded-xl py-6 px-5"
+              className="flex flex-col border bg-secondary rounded-xl py-6 px-5"
             >
-              <div className="mb-4 h-10 w-10 flex items-center justify-center bg-muted rounded-full">
+              <div className="mb-4 h-10 w-10 flex items-center justify-center rounded-full">
                 <feature.icon className="size-5" />
               </div>
               <span className="text-lg font-semibold">{feature.title}</span>
-              <p className="mt-1 text-foreground/80 text-[15px]">
+              <p className="mt-1  text-[15px]">
                 {feature.description}
               </p>
             </div>
@@ -75,4 +63,4 @@ const Features01Page = () => {
   );
 };
 
-export default Features01Page;
+export default Features02;
