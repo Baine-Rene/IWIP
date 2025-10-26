@@ -3,40 +3,45 @@ import { Linkedin } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
+
 const teamMembers = [
   {
     name: "Darren Baine",
-    title: "Founder & CEO",
-    bio: "Darren Harry Baine is an Ugandan social entrepreneur, international speaker, mentor founder of Young Eye Initiative and co-founder of the IWIP App.",
-    imageUrl:
-      "",
+    title: "Co-Founder",
+    bio: "Darren Harry Baine, founder of Young Eye Initiative and co-founder of the IWIP App.",
+    imageUrl: "/profiles/Darren.png",
+    link:"https://www.linkedin.com/in/darren-harry-baine-84760a1b6/",
   },
   {
     name: "Felix Odong",
     title: "Mobile App Developer",
-    bio: "",
+    bio: "Android app developer at IWIP",
     imageUrl:
-      "",
+      "/profiles/Felix.png",
+      link:"",
   },
   {
     name: "Daniel Nkurunziza",
     title: "Web Developer",
     bio: "Graduate of University of Kent | Computer Science with a Year in Industry",
-    imageUrl: "",
+    imageUrl: "/profiles/Daniel.png",
+    link:"https://www.linkedin.com/in/daniel-nkurunziza/",
   },
   {
     name: "Rene Baine",
-    title: "Co-Founder & Frontend Developer",
+    title: "Co-Founder & Graphic Designer",
     bio: "Bachelor of Science (Honors) in Computer Science student at Trent University",
     imageUrl:
-      "",
+      "/profiles/Rene.png",
+      link:"https://www.linkedin.com/in/ren%C3%A9-baine-9b6519319/",
   },
   {
     name: "Princess Mwebe",
     title: "Social Media Manager",
     bio: "Graduate from Northeastern University with a Bachelors of Science in Psychology in June 2024.",
     imageUrl:
-      "",
+      "/profiles/Princess.png",
+      link:"https://www.linkedin.com/in/princess-mwebe-3027aa257/",
   },
 ];
 
@@ -61,15 +66,16 @@ const Team = () => {
             <Image
               src={member.imageUrl}
               alt={member.name}
-              className="shrink-0 h-16 w-16 sm:h-20 sm:w-20 rounded-full object-cover bg-accent"
               width={120}
               height={120}
+              className="rounded-full object-cover"
             />
+
             <h3 className="mt-5 text-lg font-semibold">{member.name}</h3>
             <p className="text-muted-foreground text-sm">{member.title}</p>
             <p className="mt-2 mb-6 text-pretty">{member.bio}</p>
             <div className="mt-auto flex items-center gap-4">
-              <Link href="#" target="_blank">
+              <Link href={member.link} target="_blank">
                 <Linkedin className="stroke-muted-foreground h-5 w-5" />
               </Link>
             </div>
