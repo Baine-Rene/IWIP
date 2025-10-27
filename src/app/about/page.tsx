@@ -1,14 +1,13 @@
 
 import Navbar from "@/components/navigation/navigation";
 import Footer from "@/components/footer";
-import Values from "@/components/values";
 export default function Home() {
   return (
     <>
       <Navbar />
-      <section className="bg-secondary pb-24">
+      <section className="bg-secondary pb-18">
         {/* Full Width Hero */}
-        <div className="bg-primary pt-38 pb-24">
+        <div className="bg-blue-800 pt-38 pb-24">
           <div className="container flex flex-col items-left lg:my-0 lg:flex-row lg:justify-center lg:gap-8 mx-auto max-w-7xl lg:px-24 text-white">
             <h1 className="text-5xl font-bold tracking-tight md:text-5xl lg:text-6xl md:p-0 px-10  lg:items-start gap-5 lg:flex-1">
               About us
@@ -27,7 +26,6 @@ export default function Home() {
                 <p className="text-muted-foreground text-lg leading-7">
                   Inspired Work in Progress (IWIP) is a global networking organization dedicated to creating an inclusive community where professionals from diverse backgrounds can connect, collaborate, and grow together.
                 </p>
-                <Values/>
               </div>
             </div>
           </div>
@@ -36,7 +34,12 @@ export default function Home() {
           <div className="py-5">
             <div className="container">
               <div className="mx-auto max-w-3xl">
-                <h2 className="text-2xl font-semibold pb-5">Our Values</h2>
+                <h2 className="text-3xl font-bold pb-5" >Our Mission</h2>
+                <p>To redefine networking by making it smarter, more human, and more impactful, so that every connection can lead to real opportunities.</p>
+                <h2 className="text-3xl font-bold py-5" >Our Vision</h2>
+                <p>Build authentic, lasting connections by combining simplicity, personalization, and technology.</p>
+
+                <h2 className="text-2xl font-semibold py-5">Our Values</h2>
                 <ul className="list-disc list-inside">
                   <li>Inclusivity: We welcome professionals from all backgrounds, industries, and career stages.</li>
                   <li>Authenticity: We foster genuine connections based on trust and mutual respect.</li>
