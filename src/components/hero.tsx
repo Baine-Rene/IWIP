@@ -21,11 +21,12 @@ interface Hero {
 
 const Hero = ({
     heading = "Reworking Networking With Digital Business Cards",
-    description = "Designed to empower young people by fostering the right mindset, building leadership skills, and nurturing entrepreneurial thinking to help them unlock their potential and shape their future.",
+    description = "Designed to empower young people by fostering the right mindset, building leadership skills, and nurturing entrepreneurial thinking to help them unlock their potential and shape their future.",
     buttons = {
         primary: {
             text: "Join Now",
             url: "https://iwip.app/",
+            
         },
     },
     image = {
@@ -46,7 +47,7 @@ const Hero = ({
                     </p>
                     <div className="flex flex-wrap items-start gap-5 lg:gap-7">
                         <Button asChild className="bg-blue-700 hover:bg-blue-900 ">
-                            <a href={buttons.primary?.url}>
+                            <a href={buttons.primary?.url} target="_blank">
                                 <span className="pr-6 pl-4 text-sm whitespace-nowrap lg:pr-8 lg:pl-6 lg:text-base">
                                     {buttons.primary?.text}
                                 </span>
