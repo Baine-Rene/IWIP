@@ -1,4 +1,3 @@
-
 import Navbar from "@/components/navigation/navigation";
 import Footer from "@/components/footer";
 export default function Home() {

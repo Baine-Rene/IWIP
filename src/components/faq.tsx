@@ -9,29 +9,28 @@ import { PlusIcon } from "lucide-react";
 
 const faq = [
   {
-    question: "What is your return policy?",
+    question: "Is IWIP secure?",
     answer:
-      "You can return unused items in their original packaging within 30 days for a refund or exchange. Contact support for assistance.",
+      "Yes. IWIP is built on a secure cloud infrastructure with data encryption and user-controlled privacy settings. Users decide what information to share, and all uploaded documents are protected. We are also compliance-ready to meet privacy regulations in different markets.",
   },
   {
-    question: "How do I track my order?",
-    answer:
-      "Track your order using the link provided in your confirmation email, or log into your account to view tracking details.",
+    question: "Who is IWIP for?",
+    answer: "IWIP is designed for a wide audience:",
+    listItems: [
+      "Students seeking to build their professional profiles",
+      "Entrepreneurs looking to network and find opportunities",
+      "Organizers planning events and managing communities",
+    ],
   },
   {
-    question: "Do you ship internationally?",
+    question: "How is IWIP different from LinkedIn or Linktree?",
     answer:
-      "Yes, we ship worldwide. Shipping fees and delivery times vary by location, and customs duties may apply for some countries.",
+      "LinkedIn is a broad social network, and Linktree is a link-sharing tool. IWIP combines the best of both, professional identity, opportunity discovery, and community networking, while keeping it simple, personalized, and event-friendly. Our focus is on meaningful, purpose-driven connections, not just visibility.",
   },
   {
-    question: "What payment methods do you accept?",
+    question: "What is the long-term vision for IWIP?",
     answer:
-      "We accept Visa, MasterCard, American Express, PayPal, Apple Pay, and Google Pay, ensuring secure payment options for all customers.",
-  },
-  {
-    question: "What if I receive a damaged item?",
-    answer:
-      "Please contact our support team within 48 hours of delivery with photos of the damaged item. We’ll arrange a replacement or refund.",
+      "Our vision is to become the go-to global networking ecosystem that bridges people, opportunities, and organizations. In the long term, IWIP will integrate AI-powered connection suggestions, event analytics, and smart community tools, making it an essential platform for professionals and organizations worldwide.",
   },
 ];
 
@@ -43,7 +42,7 @@ const FAQ = () => {
           Frequently Asked Questions
         </h2>
         <p className="mt-2 text-xl text-muted-foreground text-white">
-          Quick answers to common questions about our application. 
+          Quick answers to common questions about our application.
         </p>
 
         <Accordion
@@ -71,6 +70,13 @@ const FAQ = () => {
               </AccordionPrimitive.Header>
               <AccordionContent className="text-base text-muted-foreground">
                 {answer}
+                {faq[index].listItems && (
+                  <ul className="list-disc list-inside mt-2 space-y-1">
+                    {faq[index].listItems.map((item, i) => (
+                      <li key={i}>{item}</li>
+                    ))}
+                  </ul>
+                )}
               </AccordionContent>
             </AccordionItem>
           ))}
