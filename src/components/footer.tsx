@@ -11,15 +11,15 @@ const footerSections = [
     links: [
       {
         title: "About us",
-        href: "#",
+        href: "/about",
       },
       {
         title: "News",
-        href: "#",
+        href: "/News",
       },
       {
         title: "Contact",
-        href: "#",
+        href: "Contact",
       },
     ],
   },
@@ -41,15 +41,15 @@ const footerSections = [
     links: [
       {
         title: "Twitter",
-        href: "#",
+        href: "https://x.com/IwipApp",
       },
       {
         title: "LinkedIn",
-        href: "#",
+        href: "https://www.linkedin.com/company/106453504/admin/dashboard/",
       },
       {
         title: "Instagram",
-        href: "#",
+        href: "https://www.instagram.com/iwipapp/",
       },
     ],
   },
@@ -77,7 +77,7 @@ const Footer = () => {
           <div className="py-12 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-7 gap-x-8 gap-y-10 px-6 xl:px-0">
             <div className="col-span-full xl:col-span-3">
               {/* Logo */}
-              <Logo/>
+              <Logo />
 
               <p className="mt-4 text-white">
                 Designed to empower young people by fostering the right mindset, building leadership skills, and nurturing entrepreneurial thinking to help them unlock their potential and shape their future
@@ -92,7 +92,8 @@ const Footer = () => {
                     <li key={title}>
                       <Link
                         href={href}
-                        className="hover:text-foreground text-white"
+                        className="hover:text-blue-400 text-white"
+                        target="_blank"
                       >
                         {title}
                       </Link>
@@ -102,6 +103,7 @@ const Footer = () => {
               </div>
             ))}
           </div>
+
           <Separator />
           <div className="py-8 flex flex-col-reverse sm:flex-row items-center justify-between gap-x-2 gap-y-5 px-6 xl:px-0">
             {/* Copyright */}

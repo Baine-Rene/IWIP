@@ -6,7 +6,7 @@ export default function Home() {
       <Navbar />
       <section className="bg-secondary pb-18">
         {/* Full Width Hero */}
-        <div className="bg-blue-800 pt-38 pb-24">
+        <div className="bg-blue-800 pt-38 pb-24 px-6">
           <div className="container flex flex-col items-left lg:my-0 lg:flex-row lg:justify-center lg:gap-8 mx-auto max-w-7xl lg:px-24 text-white">
             <h1 className="text-5xl font-bold tracking-tight md:text-5xl lg:text-6xl md:p-0 px-10  lg:items-start gap-5 lg:flex-1">
               About us
