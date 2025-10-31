@@ -61,8 +61,8 @@ const footerSections = [
         href: "#",
       },
       {
-        title: "Privacy",
-        href: "#",
+        title: "Privacy Policy",
+        href: "/privacy",
       },
     ],
   },
