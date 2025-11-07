@@ -8,7 +8,7 @@ export default function Home() {
         {/* Full Width Hero */}
         <div className="bg-blue-800 pt-38 pb-24 px-6">
           <div className="container  flex-col items-left space-y-3.5 lg:my-0 lg:flex-row lg:justify- lg:gap-8 mx-auto max-w-7xl lg:px-24 text-white">
-            <h1 className="text-4xl font-bold tracking-tight md:text-6xl lg:text-2xl md:p-0  lg:items-start gap-5 lg:flex-1">
+            <h1 className="text-4xl font-bold tracking-tight md:text-6xl lg:text-6xl md:p-0  lg:items-start gap-5 lg:flex-1">
               Privacy Policy
             </h1>
             <p className="text-2xl font-medium tracking-tight ">Your privacy matters to us</p>

@@ -17,7 +17,7 @@ export default function NotFound() {
             This page is under construction
           </h2>
           <p className="mt-2 text-muted-foreground">
-            We’re still working on this section. Kindly bear with us 🙏
+            We’re still working on this section. Kindly bear with us
           </p>
 
           <div className="mt-6">

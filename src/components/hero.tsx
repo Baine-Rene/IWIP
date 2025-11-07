@@ -1,3 +1,6 @@
+'use client';
+
+import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -21,12 +24,11 @@ interface Hero {
 
 const Hero = ({
     heading = "Reworking Networking With Digital Business Cards",
-    description = "Designed to empower young people by fostering the right mindset, building leadership skills, and nurturing entrepreneurial thinking to help them unlock their potential and shape their future.",
+    description = "Designed to empower young people by fostering the right mindset, building leadership skills, and nurturing entrepreneurial thinking to help them unlock their potential and shape their future.",
     buttons = {
         primary: {
             text: "Join Now",
             url: "https://iwip.app/",
-            
         },
     },
     image = {
@@ -34,18 +36,43 @@ const Hero = ({
         alt: "Mobile Mockup of Iwip App",
     },
 }: Hero) => {
+
     return (
         <section className="w-full pt-32 bg-primary py-12">
             <div className="container flex flex-col items-center lg:my-0 lg:flex-row lg:justify-center lg:gap-8 mx-auto max-w-7xl lg:px-24">
-                <div className="flex flex-col items-center md:p-0 px-10  lg:items-start gap-5 lg:flex-1">
-                    <Badge className="bg-green-600 text-white" variant="secondary">We&apos;re live!</Badge>
-                    <h1 className="text-white text-5xl md:text-7xl max-w-2xl tracking-tighter font-semibold text-center lg:text-left">
+                <div className="flex flex-col items-center md:p-0 px-10 lg:items-start gap-5 lg:flex-1">
+                    <motion.div
+                        initial={{ opacity: 0, y: -20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.8, ease: "easeOut" }}
+                    >
+                        <Badge className="bg-green-600 text-white" variant="secondary">We&apos;re live!</Badge>
+                    </motion.div>
+                    
+                    <motion.h1 
+                        initial={{ opacity: 0, y: -30 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.8, ease: "easeOut", delay: 0.4 }}
+                        className="text-white text-5xl md:text-7xl max-w-2xl tracking-tighter font-semibold text-center lg:text-left"
+                    >
                         <span>{heading}</span>
-                    </h1>
-                    <p className="text-lg md:text-xl leading-relaxed tracking-tight text-white max-w-2xl text-center lg:text-left">
+                    </motion.h1>
+                    
+                    <motion.p 
+                        initial={{ opacity: 0, y: -20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.8, ease: "easeOut", delay: 0.5 }}
+                        className="text-lg md:text-xl leading-relaxed tracking-tight text-white max-w-2xl text-center lg:text-left"
+                    >
                         {description}
-                    </p>
-                    <div className="flex flex-wrap items-start gap-5 lg:gap-7">
+                    </motion.p>
+                    
+                    <motion.div 
+                        initial={{ opacity: 0, y: -10 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.8, ease: "easeOut", delay: 0.6 }}
+                        className="flex flex-wrap items-start gap-5 lg:gap-7"
+                    >
                         <Button asChild className="bg-blue-700 hover:bg-blue-900 ">
                             <a href={buttons.primary?.url} target="_blank">
                                 <span className="pr-6 pl-4 text-sm whitespace-nowrap lg:pr-8 lg:pl-6 lg:text-base">
@@ -56,11 +83,16 @@ const Hero = ({
                                 </div>
                             </a>
                         </Button>
-                    </div>
+                    </motion.div>
                 </div>
 
                 {/* Mock up image */}
-                <div className="relative z-10 lg:flex-1 flex justify-center lg:justify-end mt-12 lg:mt-0">
+                <motion.div 
+                    initial={{ opacity: 0, x: 50 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+                    className="relative z-10 lg:flex-1 flex justify-center lg:justify-end mt-12 lg:mt-0"
+                >
                     <div className="relative">
                         <div className="absolute top-2.5 left-1/2 h-[92%] w-[69%] -translate-x-[52%] overflow-hidden rounded-[35px]">
                             <Image
@@ -79,10 +111,10 @@ const Hero = ({
                             alt="iphone"
                         />
                     </div>
-                </div>
+                </motion.div>
             </div>
         </section>
     );
 };
 
-export { Hero };
+export default Hero;

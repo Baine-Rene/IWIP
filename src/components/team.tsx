@@ -52,9 +52,6 @@ const Team = () => {
         <h2 className="mt-3 text-4xl sm:text-5xl font-bold tracking-tighter">
           Meet Our Team
         </h2>
-        <p className="mt-6 text-base sm:text-lg text-muted-foreground">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat ullam necessitatibus esse, voluptates cupiditate amet sed. Esse rem laudantium assumenda, unde similique ratione deleniti maiores.
-        </p>
       </div>
 
       <div className="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-10 gap-y-12">
