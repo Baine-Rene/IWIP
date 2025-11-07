@@ -14,7 +14,7 @@ import { Menu, X, MoveRight } from "lucide-react";
 const navigationItems = [
   { title: "Home", href: "/" },
   { title: "About", href: "/about" },
-  { title: "Blog", href: "/blog" },
+  { title: "privacy", href: "/privacy" },
 ];
 
 const Navbar = () => {
@@ -43,7 +43,9 @@ const Navbar = () => {
           </NavigationMenu>
 
           <div className="flex items-center gap-3">
-            <Button className="rounded-full">Contact</Button>
+            <a href="mailto:iwiwpapp@gmail.com">
+              <Button className="rounded-full">Contact</Button>
+            </a>
 
             {/* Mobile Menu Button */}
             <div className="md:hidden relative">
