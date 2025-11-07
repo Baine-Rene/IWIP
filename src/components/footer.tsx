@@ -93,7 +93,7 @@ const Footer = () => {
                       <Link
                         href={href}
                         className="hover:text-blue-400 text-white"
-                        target="_blank"
+                        target="_self"
                       >
                         {title}
                       </Link>
@@ -109,7 +109,7 @@ const Footer = () => {
             {/* Copyright */}
             <span className="text-white">
               &copy; {new Date().getFullYear()}{" "}
-              <Link href="/" target="_blank">
+              <Link href="/">
                 IWIP
               </Link>
               . All rights reserved.
