@@ -15,6 +15,7 @@ const navigationItems = [
   { title: "Home", href: "/" },
   { title: "About", href: "/about" },
   { title: "privacy", href: "/privacy" },
+  { title: "Disclaimer", href: "/disclaimer" },
 ];
 
 const Navbar = () => {
