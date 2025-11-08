@@ -17,10 +17,6 @@ const footerSections = [
         title: "News",
         href: "/News",
       },
-      {
-        title: "Contact",
-        href: "Contact",
-      },
     ],
   },
   {
