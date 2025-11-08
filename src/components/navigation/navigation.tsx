@@ -14,7 +14,7 @@ import { Menu, X, MoveRight } from "lucide-react";
 const navigationItems = [
   { title: "Home", href: "/" },
   { title: "About", href: "/about" },
-  { title: "privacy", href: "/privacy" },
+  { title: "Privacy", href: "/privacy" },
   { title: "Disclaimer", href: "/disclaimer" },
 ];
 
