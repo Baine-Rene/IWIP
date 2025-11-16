@@ -7,7 +7,6 @@ import FAQ from "@/components/faq";
 import Team from "@/components/team";
 import Footer from "@/components/footer";
 import { Download2 } from "@/components/download";
-
 import { PageTransition } from "@/components/PageTransition";
 export default function Home() {
   return (
