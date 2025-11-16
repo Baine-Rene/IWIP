@@ -10,7 +10,7 @@ const teamMembers = [
     title: "Co-Founder",
     bio: "Darren Harry Baine, founder of Young Eye Initiative and co-founder of the IWIP App.",
     imageUrl: "/profiles/Darren.png",
-    link:"https://www.linkedin.com/in/darren-harry-baine-84760a1b6/",
+    link: "https://www.linkedin.com/in/darren-harry-baine-84760a1b6/",
   },
   {
     name: "Felix Odong",
@@ -18,14 +18,14 @@ const teamMembers = [
     bio: "Android app developer at IWIP",
     imageUrl:
       "/profiles/Felix.png",
-      link:"",
+    link: "",
   },
   {
     name: "Daniel Nkurunziza",
     title: "Web Developer",
     bio: "Graduate of University of Kent | Computer Science with a Year in Industry",
     imageUrl: "/profiles/Daniel.png",
-    link:"https://www.linkedin.com/in/daniel-nkurunziza/",
+    link: "https://www.linkedin.com/in/daniel-nkurunziza/",
   },
   {
     name: "Rene Baine",
@@ -33,15 +33,15 @@ const teamMembers = [
     bio: "Bachelor of Science (Honors) in Computer Science student at Trent University",
     imageUrl:
       "/profiles/Rene.png",
-      link:"https://www.linkedin.com/in/ren%C3%A9-baine-9b6519319/",
+    link: "https://www.linkedin.com/in/ren%C3%A9-baine-9b6519319/",
   },
   {
     name: "Princess Mwebe",
     title: "Social Media Manager",
-    bio: "Graduate from Northeastern University with a Bachelors of Science in Psychology in June 2024.",
+    bio: "Graduate from Northeastern University with a Bachelors of Science in Psychology",
     imageUrl:
       "/profiles/Princess.png",
-      link:"https://www.linkedin.com/in/princess-mwebe-3027aa257/",
+    link: "https://www.linkedin.com/in/princess-mwebe-3027aa257/",
   },
 ];
 
@@ -71,11 +71,13 @@ const Team = () => {
             <h3 className="mt-5 text-lg font-semibold">{member.name}</h3>
             <p className="text-muted-foreground text-sm">{member.title}</p>
             <p className="mt-2 mb-6 text-pretty">{member.bio}</p>
-            <div className="mt-auto flex items-center gap-4">
-              <Link href={member.link} target="_blank">
-                <Linkedin className="stroke-muted-foreground h-5 w-5" />
-              </Link>
-            </div>
+            {member.link && (
+              <div className="mt-auto flex items-center gap-4">
+                <Link href={member.link} target="_blank">
+                  <Linkedin className="stroke-muted-foreground h-5 w-5" />
+                </Link>
+              </div>
+            )}
           </div>
         ))}
       </div>

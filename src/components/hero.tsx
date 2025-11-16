@@ -73,7 +73,7 @@ const Hero = ({
                         transition={{ duration: 0.8, ease: "easeOut", delay: 0.6 }}
                         className="flex flex-wrap items-start gap-5 lg:gap-7"
                     >
-                        <Button asChild className="bg-blue-700 hover:bg-blue-900 ">
+                        <Button asChild className="bg-blue-800 hover:bg-blue-700 font-bold">
                             <a href={buttons.primary?.url} target="_blank">
                                 <span className="pr-6 pl-4 text-sm whitespace-nowrap lg:pr-8 lg:pl-6 lg:text-base">
                                     {buttons.primary?.text}
