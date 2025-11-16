@@ -19,7 +19,7 @@ export default function Home() {
 
         {/* Intro Section */}
         <div className="flex flex-col items-center justify-center py-12 px-6">
-          <div className="py-8">
+          <div className="py-6">
             <div className="container">
               <div className="mx-auto max-w-3xl space-y-8 text-left">
                 <h2 className="text-3xl font-bold tracking-tight md:text-4xl">
@@ -44,7 +44,7 @@ export default function Home() {
                   <li>What You’re Looking For: Let opportunities find you by highlighting what you’re seeking—whether it’s jobs, collaborations, mentors, or clients.</li>
                 </ul>
 
-                <h2 className="text-3xl font-bold pb-5" >Our Mission</h2>
+                <h2 className="text-3xl font-bold py-5" >Our Mission</h2>
                 <p>To redefine networking by making it smarter, more human, and more impactful, so that every connection can lead to real opportunities.</p>
                 <h2 className="text-3xl font-bold py-5" >Our Vision</h2>
                 <p>Build authentic, lasting connections by combining simplicity, personalization, and technology.</p>
