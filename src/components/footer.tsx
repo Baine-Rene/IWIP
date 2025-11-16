@@ -24,11 +24,11 @@ const footerSections = [
     links: [
       {
         title: "Blog",
-        href: "#",
+        href: "/blog",
       },
       {
         title: "Support",
-        href: "#",
+        href: "/support",
       },
     ],
   },
