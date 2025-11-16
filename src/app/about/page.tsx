@@ -36,6 +36,14 @@ export default function Home() {
           <div className="py-5">
             <div className="container">
               <div className="mx-auto max-w-3xl">
+                <h2 className="text-3xl font-bold pb-5" >What we do</h2>
+                <ul className="list-disc list-inside">
+                  <li>All Links in One Place: From LinkedIn to Instagram, from your website to portfolio—bring all your important links into one professional hub.</li>
+                  <li>Authenticity: We foster genuine connections based on trust and mutual respect.</li>
+                  <li>Document Uploads: Showcase resumes, pitch decks, portfolios, or presentations directly on your profile.</li>
+                  <li>What You’re Looking For: Let opportunities find you by highlighting what you’re seeking—whether it’s jobs, collaborations, mentors, or clients.</li>
+                </ul>
+
                 <h2 className="text-3xl font-bold pb-5" >Our Mission</h2>
                 <p>To redefine networking by making it smarter, more human, and more impactful, so that every connection can lead to real opportunities.</p>
                 <h2 className="text-3xl font-bold py-5" >Our Vision</h2>
