@@ -1,5 +1,4 @@
-import { Download, Monitor, Smartphone, Tablet } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { Monitor, Smartphone, Tablet } from "lucide-react";
 
 interface Download2Props {
     heading?: string;

@@ -1,8 +1,6 @@
 import {
   Blocks,
   Bot,
-  ChartPie,
-  Film,
   MessageCircle,
   Settings2,
 } from "lucide-react";

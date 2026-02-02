@@ -1,7 +1,4 @@
 import { Separator } from "@/components/ui/separator";
-import {
-  TwitterIcon,
-} from "lucide-react";
 import Link from "next/link";
 import { Logo } from "./navigation/logo";
 
@@ -111,20 +108,6 @@ const Footer = () => {
               . All rights reserved.
             </span>
 
-            {/* <div className="flex items-center gap-5 text-muted-foreground">
-              <Link href="#" target="_blank">
-                <TwitterIcon className="h-5 w-5" />
-              </Link>
-              <Link href="#" target="_blank">
-                <DribbbleIcon className="h-5 w-5" />
-              </Link>
-              <Link href="#" target="_blank">
-                <TwitchIcon className="h-5 w-5" />
-              </Link>
-              <Link href="#" target="_blank">
-                <GithubIcon className="h-5 w-5" />
-              </Link>
-            </div> */}
           </div>
         </div>
       </footer>
