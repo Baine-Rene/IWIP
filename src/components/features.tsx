@@ -2,18 +2,18 @@ import Image from "next/image";
 
 const features = [
   {
-    title: "Effortless Connectivity",
-    description: "Replace paper cards with instant digital exchanges.",
+    title: "Build Your Identity",
+    description: "Create a profile that reflects your journey, your work, and who you are becoming.",
     image: "/images/IMG-1.png",
   },
   {
-    title: "Community Growth",
-    description: "Engage with entrepreneurs, mentors and investors in one environment.",
+    title: "Make meaningful connections",
+    description: "Connect with people, start conversations, and save your contacts all in one place.",
     image: "/images/IMG-3.png",
   },
   {
-    title: "Smart Integration",
-    description: "Connect with other platforms and showcase your work dynamically.",
+    title: "Be part of real communities",
+    description: "Join or build communities where people collaborate, share oppotunities, and grow together.",
     image: "/images/IMG-2.png",
   },
 ];
@@ -23,7 +23,7 @@ const Features = () => {
     <div className="bg-secondary min-h-screen flex items-center justify-center py-12 px-6">
       <div className="grow w-full sm:max-w-(--breakpoint-md) lg:max-w-(--breakpoint-lg)">
         <h2 className="text-4xl sm:text-5xl font-bold tracking-tight">
-          Powered by the Young Eye Initiative
+          Powered by the Young Eye tech
         </h2>
         <div className="w-full mt-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-12">
           {features.map((feature) => (
