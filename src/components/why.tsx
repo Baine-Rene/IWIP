@@ -1,7 +1,7 @@
 import {
   Blocks,
-  Bot,
   MessageCircle,
+  Paperclip,
   Settings2,
 } from "lucide-react";
 import React from "react";
@@ -9,31 +9,31 @@ import React from "react";
 const features = [
   {
     icon: Settings2,
-    title: "A new way to build your network",
+    title: "Instant and Seamless Networking",
     description:
-      "Say goodbye to outdated business cards.",
+      "Share your IWIP profile and information instantly through one click, one QR code, and no friction.",
   },
   {
     icon: Blocks,
-    title: "Connect with others",
+    title: "Community insights and Analytics",
     description:
-      "Network with purpose, not just by chance.",
+      "Track engagement, activity and growth within your communities.",
   },
   {
-    icon: Bot,
-    title: "Grow you professional network",
+    icon: Paperclip,
+    title: "Share More Than Just a Profile",
     description:
-      "Share your entire professional presence in seconds.",
+      "Upload and share documents like resumes, portfolios, and links all accessible in one place.",
   },
   {
     icon: MessageCircle,
-    title: "Seamless Collaboration",
+    title: "Built in Messaging and Contact Management",
     description:
-      "Comment, tag, and assign tasks directly within your documents.",
+      "Connect, chat and save contacts directly within one platform.",
   },
 ];
 
-const Features02 = () => {
+const Why = () => {
   return (
     <div className="bg-primary min-h-screen flex items-center justify-center py-12">
       <div>
@@ -61,4 +61,4 @@ const Features02 = () => {
   );
 };
 
-export default Features02;
+export default Why;
