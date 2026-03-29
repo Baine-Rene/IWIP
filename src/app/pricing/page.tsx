@@ -1,54 +1,161 @@
+"use client";
+
+import { Check } from "lucide-react";
+import { useState } from "react";
+
 import Navbar from "@/components/navigation/navigation";
 import Footer from "@/components/footer";
-import { PageTransition } from "@/components/PageTransition";
-export default function Home() {
+
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import { Separator } from "@/components/ui/separator";
+import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { cn } from "@/lib/utils";
+
+interface PricingPlan {
+  name: string;
+  badge: string;
+  monthlyPrice: string;
+  yearlyPrice: string;
+  features: string[];
+  buttonText: string;
+  isPopular?: boolean;
+}
+
+interface Pricing4Props {
+  title?: string;
+  description?: string;
+  plans?: PricingPlan[];
+  className?: string;
+}
+
+const Pricing = ({
+  title = "Pricing",
+  description = "Check out our affordable pricing plans.",
+  plans = [
+    {
+      name: "Community Basic",
+      badge: "Community Basic",
+      monthlyPrice: "$0",
+      yearlyPrice: "$0",
+      features: ["50 members", "Basic tools and Standard analytics", "1 admin"],
+      buttonText: "Get Started",
+    },
+    {
+      name: "Community Pro",
+      badge: "Community Pro",
+      monthlyPrice: "$13",
+      yearlyPrice: "$130",
+      features: [
+        "Up to 500 community members",
+        "Full branding of community",
+        "Advanced analytics",
+        "Year on end reports",
+        "Up to 5 admins",
+      ],
+      buttonText: "Purchase",
+    },
+    {
+      name: "Community Enterprise",
+      badge: "Community Enterprise",
+      monthlyPrice: "$17",
+      yearlyPrice: "$180",
+      features: [
+        "Both free and pro features",
+        "Unlimited members",
+        "Dedicated manager",
+        "Quarterly reports",
+      ],
+      buttonText: "Purchase",
+      isPopular: true,
+    },
+  ],
+  className,
+}: Pricing4Props) => {
+  const [isAnnually, setIsAnnually] = useState(false);
   return (
     <>
-    <PageTransition>
       <Navbar />
-      <section className="bg-secondary pb-18">
-        {/* Full Width Hero */}
-        <div className="bg-blue-800 pt-38 pb-24 px-6">
-          <div className="container  flex-col items-left space-y-3.5 lg:my-0 lg:flex-row lg:justify- lg:gap-8 mx-auto max-w-7xl lg:px-24 text-white">
-            <h1 className="text-4xl font-bold tracking-tight md:text-6xl lg:text-6xl md:p-0  lg:items-start gap-5 lg:flex-1">
-              Pricing
-            </h1>
-            <h2 className="text-2xl font-medium tracking-tight ">Discover our pricing teirs to see what wuits you best.</h2>
-          </div>
-        </div>
-
-        {/* Intro Section */}
-        <div className="flex flex-col items-center justify-center py-12 px-6">
-          <div className="py-8">
-            <div className="container">
-              <div className="mx-auto max-w-3xl space-y-8 text-left">
-                <p className="text-muted-foreground text-lg leading-7">
-                  The information provided by Inspired Work in Progress (&quot;IWIP&quot;) on our website and through our services is for general informational purposes only. All information is provided in good faith; however, we make no representation or warranty of any kind, express or implied, regarding the accuracy, adequacy, validity, reliability, availability, or completeness of any information provided.
-                </p>
-                <p className="text-muted-foreground text-lg leading-7">
-                  Under no circumstance shall we have any liability to you for any loss or damage of any kind incurred as a result of the use of our website or reliance on any information provided. Your use of our services and your reliance on any information is solely at your own risk.
-                </p>
-              </div>
+      <section className={cn("py-32", className)}>
+        <div className="container mx-auto">
+          <div className="flex flex-col gap-6">
+            <h2 className="text-4xl font-semibold text-pretty lg:text-6xl">
+              {title}
+            </h2>
+            <div className="flex flex-col justify-between gap-10 md:flex-row">
+              <p className="max-w-3xl text-muted-foreground lg:text-xl">
+                {description}
+              </p>
+              <Tabs
+                value={isAnnually ? "annually" : "monthly"}
+                onValueChange={(value: string) =>
+                  setIsAnnually(value === "annually")
+                }
+                className="w-fit shrink-0"
+                aria-label="Billing period"
+              >
+                <TabsList className="grid h-11 w-max grid-cols-2 gap-0 rounded-md p-1 text-lg">
+                  <TabsTrigger
+                    value="monthly"
+                    className="h-full min-h-0 px-7 py-0 font-semibold text-muted-foreground data-active:text-foreground"
+                  >
+                    Monthly
+                  </TabsTrigger>
+                  <TabsTrigger
+                    value="annually"
+                    className="h-full min-h-0 px-7 py-0 font-semibold text-muted-foreground data-active:text-foreground"
+                  >
+                    Yearly
+                  </TabsTrigger>
+                </TabsList>
+              </Tabs>
             </div>
-          </div>
-          <div className="py-5">
-            <div className="container">
-              <div className="mx-auto max-w-3xl">
-                <h3 className="text-2xl font-semibold pb-5">External Links</h3>
-                <p>Our website may contain links to external websites that are not provided or maintained by or in any way affiliated with IWIP. Please note that we do not guarantee the accuracy, relevance, timeliness, or completeness of any information on these external websites.</p>
-
-                <h3 className="text-2xl font-semibold py-5">Personal Advice</h3>
-                <p>The information provided by IWIP is not intended to be a substitute for professional advice. You should not take actions based solely on the information provided on our website or through our services. Before making any decisions or taking any actions that might affect your career or business, you should consult with a qualified professional.</p>
-
-                <h3 className="text-2xl font-semibold py-5">Changes to disclaimer</h3>
-                <p>We reserve the right to make changes to this Disclaimer at any time. We encourage you to periodically review this page for the latest information on our disclaimers and terms. By using our services, you acknowledge that you have read and understood this Disclaimer and agree to be bound by its terms.</p>
-              </div>
+            <div className="flex w-full flex-col items-stretch gap-6 md:flex-row">
+              {plans.map((plan) => (
+                <div
+                  key={plan.name}
+                  className={`flex w-full flex-col rounded-lg border p-6 text-left ${
+                    plan.isPopular ? "bg-muted" : ""
+                  }`}
+                >
+                  <Badge className="mb-8 block w-fit uppercase">
+                    {plan.badge}
+                  </Badge>
+                  <h3 className="font-mono text-4xl lg:text-5xl">
+                    {isAnnually ? plan.yearlyPrice : plan.monthlyPrice}
+                  </h3>
+                  <p
+                    className={`text-muted-foreground ${plan.monthlyPrice === "$0" ? "invisible" : ""}`}
+                  >
+                    {isAnnually ? "Per year" : "Per month"}
+                  </p>
+                  <Separator className="my-6" />
+                  <div className="flex h-full flex-col justify-between gap-20">
+                    <ul className="space-y-4 text-muted-foreground md:leading-snug">
+                      {plan.features.map((feature, featureIndex) => (
+                        <li
+                          key={featureIndex}
+                          className="flex items-center gap-2"
+                        >
+                          <Check
+                            className="size-4 shrink-0"
+                            aria-hidden="true"
+                          />
+                          <span>{feature}</span>
+                        </li>
+                      ))}
+                    </ul>
+                    <Button className="w-full">{plan.buttonText}</Button>
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
         </div>
       </section>
       <Footer />
-      </PageTransition>
     </>
   );
-}
+};
+
+export default Pricing;
