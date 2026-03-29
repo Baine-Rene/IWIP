@@ -7,31 +7,30 @@ import { cn } from "@/lib/utils";
 import * as AccordionPrimitive from "@radix-ui/react-accordion";
 import { PlusIcon } from "lucide-react";
 
-const faq = [
+const faq: Array<{ question: string; answer: string; listItems?: string[] }> = [
   {
-    question: "Is IWIP secure?",
+    question: "What is Iwip?",
     answer:
-      "Yes. IWIP is built on a secure cloud infrastructure with data encryption and user-controlled privacy settings. Users decide what information to share, and all uploaded documents are protected. We are also compliance-ready to meet privacy regulations in different markets.",
+      "IWIP (Inspired Work In Progress) is a platform where professionals create their digital identity, connect with others, and engage in communities - all in one place.",
   },
   {
-    question: "Who is IWIP for?",
-    answer: "IWIP is designed for a wide audience:",
-    listItems: [
-      "Students seeking to build their professional profiles",
-      "Entrepreneurs looking to network and find opportunities",
-      "Organizers planning events and managing communities",
-    ],
+    question: "What is an IWIP Card",
+    answer: "An IWIP Card is your personal digital profile. It showcases who you are, what you do, and includes everything you want to share - like your contact info, documents, and social media links.",
   },
   {
-    question: "How is IWIP different from LinkedIn or Linktree?",
+    question: "Is IWIP free to use?",
     answer:
-      "LinkedIn is a broad social network, and Linktree is a link-sharing tool. IWIP combines the best of both, professional identity, opportunity discovery, and community networking, while keeping it simple, personalized, and event-friendly. Our focus is on meaningful, purpose-driven connections, not just visibility.",
+      "Yes. IWIP offers a free version with core features, as well as a pro option with advanced customization and additional tools for individuals and communities.",
   },
   {
-    question: "What is the long-term vision for IWIP?",
+    question: "How do connections work on IWIP?",
     answer:
-      "Our vision is to become the go-to global networking ecosystem that bridges people, opportunities, and organizations. In the long term, IWIP will integrate AI-powered connection suggestions, event analytics, and smart community tools, making it an essential platform for professionals and organizations worldwide.",
+      "You can connect with others on the app, start conversations through chat, and save their contact information for future use to keep your network organized.",
   },
+  {
+  question: "Can I see who is in a community?",
+  answer: "Yes. Community members are visible, making it easy to discover and engage with others in the same space.",
+  }
 ];
 
 const FAQ = () => {
@@ -41,7 +40,7 @@ const FAQ = () => {
         <h2 className="text-4xl md:text-5xl leading-[1.15]! font-bold tracking-tighter text-white">
           Frequently Asked Questions
         </h2>
-        <p className="mt-2 text-xl text-muted-foreground text-white">
+        <p className="mt-2 text-xl text-muted-foreground max-w-lg">
           Quick answers to common questions about our application.
         </p>
 
