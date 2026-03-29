@@ -23,12 +23,12 @@ interface Hero {
 }
 
 const Hero = ({
-    heading = "Redefine networking by making it smarter, more human, and more impactful",
-    description = "Designed to empower young people by fostering the right mindset, building leadership skills, and nurturing entrepreneurial thinking to help them unlock their potential and shape their future.",
+    heading = "IWIP is not just a name, it is an identity. Become an Inspired work in Progress today!",
+    description = "Create your IWIP card today! Powered by the Young Eye Tech, An organization that builds data driven systems that improve how information is organized, managed and used ",
     buttons = {
         primary: {
-            text: "Join Now",
-            url: "https://iwip.app/",
+            text: "Sign Up",
+            url: "https://app.iwip.app/login",
         },
     },
     image = {
@@ -73,9 +73,9 @@ const Hero = ({
                         transition={{ duration: 0.8, ease: "easeOut", delay: 0.6 }}
                         className="flex flex-wrap items-start gap-5 lg:gap-7"
                     >
-                        <Button asChild className="bg-blue-800 hover:bg-blue-700 font-bold">
+                        <Button asChild className="bg-blue-700 hover:bg-blue-900 font-bold">
                             <a href={buttons.primary?.url} target="_blank">
-                                <span className="pr-6 pl-4 text-sm whitespace-nowrap lg:pr-8 lg:pl-6 lg:text-base">
+                                <span className="pr-4 pl-4 text-sm whitespace-nowrap lg:pr-8 lg:pl-6 lg:text-base">
                                     {buttons.primary?.text}
                                 </span>
                                 <div className="flex items-center gap-2">
