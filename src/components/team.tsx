@@ -68,6 +68,7 @@ const Team = () => {
             className="flex flex-col items-center text-center bg-accent py-8 px-6 rounded-lg"
           >
             <Image
+            
               src={member.imageUrl}
               alt={member.name}
               width={120}

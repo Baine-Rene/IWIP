@@ -11,8 +11,12 @@ const footerSections = [
         href: "/about",
       },
       {
-        title: "News",
-        href: "/News",
+        title:"Pricing",
+        href:"/pricing",
+      },
+      {
+        title: "Events",
+        href: "/events",
       },
     ],
   },
