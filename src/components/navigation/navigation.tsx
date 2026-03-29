@@ -14,6 +14,7 @@ import { Menu, X, MoveRight } from "lucide-react";
 const navigationItems = [
   { title: "Home", href: "/" },
   { title: "About", href: "/about" },
+  { title: "Pricing ", href: "/pricing" },
   { title: "Privacy", href: "/privacy" },
   { title: "Disclaimer", href: "/disclaimer" },
 ];
@@ -34,9 +35,7 @@ const Navbar = () => {
               {navigationItems.map((item) => (
                 <NavigationMenuItem key={item.title} className="font-bold">
                   <NavigationMenuLink asChild>
-                    <Link href={item.href}>
-                      {item.title}
-                    </Link>
+                    <Link href={item.href}>{item.title}</Link>
                   </NavigationMenuLink>
                 </NavigationMenuItem>
               ))}
@@ -55,7 +54,11 @@ const Navbar = () => {
                 size="icon"
                 onClick={() => setIsOpen(!isOpen)}
               >
-                {isOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+                {isOpen ? (
+                  <X className="w-5 h-5" />
+                ) : (
+                  <Menu className="w-5 h-5" />
+                )}
               </Button>
 
               {/* Mobile Dropdown */}

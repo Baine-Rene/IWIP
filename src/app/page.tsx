@@ -1,4 +1,3 @@
-
 import Hero from "@/components/hero";
 import Navbar from "@/components/navigation/navigation";
 import Features from "@/components/features";
