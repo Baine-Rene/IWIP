@@ -6,14 +6,14 @@ import Link from "next/link";
 const teamMembers = [
   {
     name: "Darren Baine",
-    title: "Co-Founder",
+    title: "Co-Founder & Managing Director",
     bio: "Darren Harry Baine, founder of Young Eye Initiative and co-founder of the IWIP App.",
     imageUrl: "/profiles/Darren.png",
     link: "https://www.linkedin.com/in/darren-harry-baine-84760a1b6/",
   },
   {
     name: "Felix Odong",
-    title: "Mobile App Developer",
+    title: "Lead Mobile Developer",
     bio: "Android app developer at IWIP",
     imageUrl:
       "/profiles/Felix.png",
@@ -28,7 +28,7 @@ const teamMembers = [
   },
   {
     name: "Rene Baine",
-    title: "Co-Founder & Graphic Designer",
+    title: "Co-Founder & Head of UX/UI Design",
     bio: "Bachelor of Science (Honors) in Computer Science student at Trent University",
     imageUrl:
       "/profiles/Rene.png",
@@ -36,11 +36,19 @@ const teamMembers = [
   },
   {
     name: "Princess Mwebe",
-    title: "Social Media Manager",
+    title: "Head of Marketing",
     bio: "Graduate from Northeastern University with a Bachelors of Science in Psychology",
     imageUrl:
       "/profiles/Princess.png",
     link: "https://www.linkedin.com/in/princess-mwebe-3027aa257/",
+  },
+  {
+    name: "Uday Seth",
+    title: "Head of Finance",
+    bio: "",
+    imageUrl:
+      "",
+    link: "",
   },
 ];
 
