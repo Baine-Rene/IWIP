@@ -143,7 +143,7 @@ export default function ProfileView({ user }: { user: PublicUser }) {
           </Link>
           <Button asChild size="sm" className="rounded-full bg-blue-800 hover:bg-blue-700">
             <a
-              href="https://play.google.com/store/apps/details?id=com.iwip.app"
+              href="https://play.google.com/store/apps/details?id=com.app.iwp"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -353,7 +353,7 @@ export default function ProfileView({ user }: { user: PublicUser }) {
                 className="w-full sm:w-auto rounded-full bg-blue-800 hover:bg-blue-700 px-8"
               >
                 <a
-                  href="https://play.google.com/store/apps/details?id=com.iwip.app"
+                  href="https://play.google.com/store/apps/details?id=com.app.iwp"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
