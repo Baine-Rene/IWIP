@@ -81,6 +81,11 @@ function getSocialIcon(platform: string) {
   }
 }
 
+function ensureAbsoluteUrl(url: string): string {
+  if (/^https?:\/\//i.test(url)) return url;
+  return `https://${url}`;
+}
+
 function getSocialColor(platform: string): string {
   switch (platform.toLowerCase()) {
     case "linkedin":
@@ -269,7 +274,7 @@ export default function ProfileView({ user }: { user: PublicUser }) {
                 return (
                   <a
                     key={platform}
-                    href={url}
+                    href={ensureAbsoluteUrl(url)}
                     target="_blank"
                     rel="noopener noreferrer"
                     className={`inline-flex items-center gap-2 px-4 py-2.5 rounded-xl border text-sm font-medium transition-colors ${getSocialColor(platform)}`}
