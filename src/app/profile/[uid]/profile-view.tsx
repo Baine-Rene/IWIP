@@ -171,12 +171,10 @@ export default function ProfileView({ user }: { user: PublicUser }) {
             <motion.div custom={0} variants={fadeUp} className="relative mb-6">
               <div className="relative h-28 w-28 md:h-36 md:w-36 rounded-full ring-4 ring-white/20 overflow-hidden shadow-2xl">
                 {user.profileImageUrl ? (
-                  <Image
+                  <img
                     src={user.profileImageUrl}
                     alt={user.fullName}
-                    fill
-                    className="object-cover"
-                    sizes="144px"
+                    className="h-full w-full object-cover"
                   />
                 ) : (
                   <div className="h-full w-full bg-white/10 flex items-center justify-center">
