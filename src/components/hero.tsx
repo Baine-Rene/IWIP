@@ -24,7 +24,7 @@ interface Hero {
 
 const Hero = ({
     heading = "IWIP is not just a name, it is an identity. Become an Inspired work in Progress today!",
-    description = "Create your IWIP card today! Powered by the Young Eye Tech, An organization that builds data driven systems that improve how information is organized, managed and used ",
+    description = "Create your IWIP card today! Powered by the Young Eye Tech, An organization that builds data driven systems that improve how information is organized, managed and used.",
     buttons = {
         primary: {
             text: "Sign Up",
@@ -98,16 +98,16 @@ const Hero = ({
                             <Image
                                 src={image.src}
                                 alt={image.alt}
-                                width={450}
-                                height={889}
+                                width={1200}
+                                height={2473}
                                 className="size-full object-cover object-[50%_0%]"
                             />
                         </div>
                         <Image
                             className="relative z-10"
-                            src="https://deifkwefumgah.cloudfront.net/shadcnblocks/block/mockups/phone-2.png"
-                            width={450}
-                            height={889}
+                            src=""
+                            width={500}
+                            height={770}
                             alt="iphone"
                         />
                     </div>

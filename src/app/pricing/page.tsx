@@ -76,7 +76,7 @@ const Pricing = ({
   return (
     <>
       <Navbar />
-      <section className={cn("py-32", className)}>
+      <section className={cn("w-full pt-32 py-32", className)}>
         <div className="container mx-auto">
           <div className="flex flex-col gap-6">
             <h2 className="text-4xl font-semibold text-pretty lg:text-6xl">
