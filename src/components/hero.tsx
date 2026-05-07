@@ -24,7 +24,7 @@ interface Hero {
 
 const Hero = ({
     heading = "IWIP is not just a name, it is an identity. Become an Inspired work in Progress today!",
-    description = "Create your IWIP card today! Powered by the Young Eye Tech, An organization that builds data driven systems that improve how information is organized, managed and used.",
+    description = "Create your IWIP card today! Powered by the Young Eye Tech, An organization that builds data driven systems that improve how information is organized, managed and used ",
     buttons = {
         primary: {
             text: "Sign Up",
@@ -32,13 +32,13 @@ const Hero = ({
         },
     },
     image = {
-        src: "images/showcase.svg",
+        src: "/images/showcase.svg",
         alt: "Mobile Mockup of Iwip App",
     },
 }: Hero) => {
 
     return (
-        <section className="w-full pt-32 bg-primary py-12">
+        <section className="w-full overflow-x-hidden pt-32 bg-primary py-12">
             <div className="container flex flex-col items-center lg:my-0 lg:flex-row lg:justify-center lg:gap-8 mx-auto max-w-7xl lg:px-24">
                 <div className="flex flex-col items-center md:p-0 px-10 lg:items-start gap-5 lg:flex-1">
                     <motion.div
@@ -93,23 +93,16 @@ const Hero = ({
                     transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
                     className="relative z-10 lg:flex-1 flex justify-center lg:justify-end mt-12 lg:mt-0"
                 >
-                    <div className="relative">
-                        <div className="absolute top-2.5 left-1/2 h-[92%] w-[69%] -translate-x-[52%] overflow-hidden rounded-[35px]">
+                    <div className="relative w-full max-w-[260px] sm:max-w-[320px] lg:max-w-[360px]">
+                        <div className="relative overflow-hidden rounded-[35px] w-full">
                             <Image
                                 src={image.src}
                                 alt={image.alt}
-                                width={1200}
-                                height={2473}
-                                className="size-full object-cover object-[50%_0%]"
+                                width={450}
+                                height={889}
+                                className="w-full h-auto object-cover object-[50%_0%]"
                             />
                         </div>
-                        <Image
-                            className="relative z-10"
-                            src=""
-                            width={500}
-                            height={770}
-                            alt="iphone"
-                        />
                     </div>
                 </motion.div>
             </div>
