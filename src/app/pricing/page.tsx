@@ -3,9 +3,6 @@
 import { Check } from "lucide-react";
 import { useState } from "react";
 
-import Navbar from "@/components/navigation/navigation";
-import Footer from "@/components/footer";
-
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
@@ -75,7 +72,6 @@ const Pricing = ({
   const [isAnnually, setIsAnnually] = useState(false);
   return (
     <>
-      <Navbar />
       <section className={cn("w-full pt-32 py-32", className)}>
         <div className="container mx-auto">
           <div className="flex flex-col gap-6">
@@ -153,7 +149,6 @@ const Pricing = ({
           </div>
         </div>
       </section>
-      <Footer />
     </>
   );
 };

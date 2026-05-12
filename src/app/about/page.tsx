@@ -1,12 +1,8 @@
-import Navbar from "@/components/navigation/navigation";
-import Footer from "@/components/footer";
-
 import { PageTransition } from "@/components/PageTransition";
 export default function Home() {
   return (
     <>
     <PageTransition>
-      <Navbar />
       <section className="bg-secondary pb-18">
         {/* Full Width Hero */}
         <div className="bg-blue-800 pt-38 pb-24 px-6">
@@ -69,7 +65,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <Footer />
       </PageTransition>
     </>
   );
