@@ -35,7 +35,7 @@ const features = [
 
 const Why = () => {
   return (
-    <div className="bg-primary min-h-screen flex items-center justify-center py-12">
+    <div className="bg-primary min-h-screen flex items-center justify-center px-5 py-12">
       <div>
         <h2 className="text-4xl sm:text-5xl font-bold tracking-tight text-center text-white">
           Why choose IWIP?

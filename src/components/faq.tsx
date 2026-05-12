@@ -35,12 +35,12 @@ const faq: Array<{ question: string; answer: string; listItems?: string[] }> = [
 
 const FAQ = () => {
   return (
-    <div className="bg-primary min-h-screen flex items-center justify-center px-6 py-12">
-      <div className="w-full max-w-2xl">
-        <h2 className="text-4xl md:text-5xl leading-[1.15]! font-bold tracking-tighter text-white">
+    <div className="bg-primary min-h-screen flex items-center justify-center px-5 py-12">
+      <div className="w-full max-w-3xl">
+        <h2 className="text-4xl sm:text-5xl md:text-5xl leading-[1.15]! font-bold tracking-tighter text-white">
           Frequently Asked Questions
         </h2>
-        <p className="mt-2 text-xl text-muted-foreground max-w-lg">
+        <p className="mt-2 text-xl text-muted max-w-lg">
           Quick answers to common questions about our application.
         </p>
 
