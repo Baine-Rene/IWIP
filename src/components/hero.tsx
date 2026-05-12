@@ -53,7 +53,7 @@ const Hero = ({
                         initial={{ opacity: 0, y: -30 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8, ease: "easeOut", delay: 0.4 }}
-                        className="text-white text-5xl md:text-7xl max-w-2xl tracking-tighter font-semibold text-center lg:text-left"
+                        className="text-white text-5xl md:text-7xl max-w-2xl tracking-tighter font-bold text-center lg:text-left"
                     >
                         <span>{heading}</span>
                     </motion.h1>

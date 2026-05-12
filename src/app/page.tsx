@@ -5,7 +5,7 @@ import Why from "@/components/why";
 import FAQ from "@/components/faq";
 import Team from "@/components/team";
 import Footer from "@/components/footer";
-import { Download2 } from "@/components/download";
+import { Download } from "@/components/download";
 import { PageTransition } from "@/components/PageTransition";
 export default function Home() {
   return (
@@ -17,7 +17,7 @@ export default function Home() {
         <Why />
         <Team />
         <FAQ />
-        <Download2 />
+        <Download />
         <Footer />
       </PageTransition>
     </>
