@@ -28,11 +28,11 @@ interface Pricing4Props {
 
 const Pricing = ({
   title = "Pricing",
-  description = "Check out our affordable pricing plans.",
+  description = "Explore our affordable pricing plans.",
   plans = [
     {
       name: "Community Basic",
-      badge: "Community Basic",
+      badge: "Community Basic - free",
       monthlyPrice: "$0",
       yearlyPrice: "$0",
       features: ["50 members", "Basic tools and Standard analytics", "1 admin"],
@@ -72,14 +72,14 @@ const Pricing = ({
   const [isAnnually, setIsAnnually] = useState(false);
   return (
     <>
-      <section className={cn("w-full pt-32 py-32", className)}>
-        <div className="container mx-auto">
+      <section className={cn("w-full pt-32 py-32 bg-blue-700", className)}>
+        <div className="container mx-auto px-8">
           <div className="flex flex-col gap-6">
-            <h2 className="text-4xl font-semibold text-pretty lg:text-6xl">
+            <h2 className="text-4xl md:text-5xl font-semibold text-pretty lg:text-6xl text-white">
               {title}
             </h2>
             <div className="flex flex-col justify-between gap-10 md:flex-row">
-              <p className="max-w-3xl text-muted-foreground lg:text-xl">
+              <p className="max-w-3xl lg:text-xl font-semibold text-white">
                 {description}
               </p>
               <Tabs
@@ -111,7 +111,8 @@ const Pricing = ({
                 <div
                   key={plan.name}
                   className={`flex w-full flex-col rounded-lg border p-6 text-left ${
-                    plan.isPopular ? "bg-muted" : ""
+                    plan.isPopular ? "bg-background" : "bg-muted"
+                    
                   }`}
                 >
                   <Badge className="mb-8 block w-fit uppercase">
