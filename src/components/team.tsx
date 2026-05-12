@@ -7,7 +7,7 @@ const teamMembers = [
   {
     name: "Darren Baine",
     title: "Co-Founder & Managing Director",
-    bio: "Darren Harry Baine, founder of Young Eye Initiative and co-founder of the IWIP App.",
+    bio: "Founder of Young Eye Initiative",
     imageUrl: "/profiles/Darren.png",
     link: "https://www.linkedin.com/in/darren-harry-baine-84760a1b6/",
   },
@@ -22,14 +22,14 @@ const teamMembers = [
   {
     name: "Daniel Nkurunziza",
     title: "Web Developer",
-    bio: "Graduate of University of Kent | Computer Science with a Year in Industry",
+    bio: "Software with a Year in Industry",
     imageUrl: "/profiles/Daniel.png",
     link: "https://www.linkedin.com/in/daniel-nkurunziza/",
   },
   {
     name: "Rene Baine",
-    title: "Co-Founder & Head of UX/UI Design",
-    bio: "Bachelor of Science (Honors) in Computer Science student at Trent University",
+    title: "Co-Founder & Frontend Engineer",
+    bio: "Computer Science student at Trent University",
     imageUrl:
       "/profiles/Rene.png",
     link: "https://www.linkedin.com/in/ren%C3%A9-baine-9b6519319/",
@@ -37,7 +37,7 @@ const teamMembers = [
   {
     name: "Princess Mwebe",
     title: "Head of Marketing",
-    bio: "Graduate from Northeastern University with a Bachelors of Science in Psychology",
+    bio: "Founder of YS Academy, Northeastern University Alumni",
     imageUrl:
       "/profiles/Princess.png",
     link: "https://www.linkedin.com/in/princess-mwebe-3027aa257/",
@@ -45,10 +45,10 @@ const teamMembers = [
   {
     name: "Uday Seth",
     title: "Head of Finance",
-    bio: "",
+    bio: "Financial Analyst",
     imageUrl:
-      "",
-    link: "",
+      "/profiles/Uday.png",
+    link: "https://www.linkedin.com/in/uday-sheth-a31b25191/",
   },
 ];
 
