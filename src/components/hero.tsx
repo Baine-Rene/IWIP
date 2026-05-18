@@ -29,7 +29,7 @@ const Hero = ({
     description = "Create your IWIP card today! Powered by the Young Eye Tech, An organization that builds data driven systems that improve how information is organized, managed and used",
     buttons = {
         primary: {
-            text: "Sign Up",
+            text: "Get Started",
             url: "https://app.iwip.app/login",
         },
     },
@@ -81,7 +81,7 @@ const Hero = ({
                 duration: 0.5,
                 stagger: 0.018,
                 ease: "back.out(1.7)",
-                delay: 0.5, // matches your badge delay so it feels sequenced
+                delay: 0.5, 
             });
         });
 
@@ -97,7 +97,7 @@ const Hero = ({
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8, ease: "easeOut" }}
                     >
-                        <Badge className="bg-green-600 text-white" variant="secondary">
+                        <Badge className="bg-green-600 text-base text-white" variant="secondary">
                             We&apos;re live!
                         </Badge>
                     </motion.div>
@@ -105,7 +105,7 @@ const Hero = ({
                     {/* GSAP handles this — no motion.h1 wrapper needed */}
                     <h1
                         ref={headingRef}
-                        className="text-white text-5xl md:text-7xl max-w-2xl tracking-tighter font-bold text-center lg:text-left"
+                        className="text-white text-5xl md:text-7xl max-w-2xl tracking-tighter font-bold font-roboto text-center lg:text-left"
                     >
                         {heading}
                     </h1>
@@ -114,7 +114,7 @@ const Hero = ({
                         initial={{ opacity: 0, y: -20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8, ease: "easeOut", delay: 0.9 }}
-                        className="text-lg md:text-xl leading-relaxed tracking-tight text-white max-w-2xl text-center lg:text-left"
+                        className="text-lg md:text-xl font-medium leading-relaxed tracking-tight text-white max-w-2xl text-center lg:text-left"
                     >
                         {description}
                     </motion.p>
@@ -127,7 +127,7 @@ const Hero = ({
                     >
                         <Button asChild className="bg-blue-700 hover:bg-blue-900 font-bold">
                             <a href={buttons.primary?.url} target="_blank">
-                                <span className="pr-4 pl-4 text-sm whitespace-nowrap lg:pr-8 lg:pl-6 lg:text-base">
+                                <span className="pr-4 pl-4 text-sm lg:pr-2 lg:pl-5 lg:text-base">
                                     {buttons.primary?.text}
                                 </span>
                                 <div className="flex items-center gap-2">
