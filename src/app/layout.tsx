@@ -12,7 +12,9 @@ const geistSans = Geist({
 });
 
 const roboto = Roboto({
-  variable: "--font-raleway",
+  variable: "--font-roboto",
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
 });
 
 const geistMono = Geist_Mono({

@@ -23,7 +23,7 @@ const features = [
 
 const Features = () => {
   return (
-    <div className="bg-secondary min-h-screen flex items-center justify-center py-10 px-6">
+    <div className="bg-brand-blue min-h-screen flex items-center justify-center py-10 px-6">
       <div className="grow w-full sm:max-w-(--breakpoint-md) lg:max-w-(--breakpoint-lg)">
         <h2 className="text-4xl sm:text-5xl md:text-5xl font-bold font-roboto tracking-tight">
           Powered by the Young Eye tech
