@@ -1,8 +1,8 @@
 "use client";
-import { Monitor, Smartphone, Tablet } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import android from "./android.svg";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCheck, faHouse } from '@fortawesome/free-solid-svg-icons'
 
 interface Download2Props {
   heading?: string;
@@ -29,13 +29,13 @@ const Download = ({
   platforms = {
     ios: {
       title: "Mobile Phone",
-      subtitle: "iOS",
+      subtitle: "App Store",
       description: "Designed for IOS devices.",
       url: "https://apps.apple.com/ug/app/iwip-app/id6761650856",
     },
     android: {
       title: "Mobile Phone / Tablet",
-      subtitle: "Android",
+      subtitle: "Google Play",
       description: "Optimized for Android ecosystem.",
       url: "https://play.google.com/store/apps/details?id=com.app.iwp",
     },
@@ -64,7 +64,7 @@ const Download = ({
             <div className="bg-background mx-auto mb-6 flex h-20 w-20 items-center justify-center rounded-full shadow-sm transition-all duration-300 group-hover:bg-blue-700 group-hover:scale-110 group-hover:shadow-lg">
               <img
                 src="/ios.svg"
-                alt="Android icon"
+                alt="apple icon"
                 className="h-10 w-10 brightness-0 transition-all duration-300 group-hover:brightness-0 group-hover:invert"
               />
             </div>
