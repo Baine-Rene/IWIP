@@ -43,7 +43,7 @@ const Download = ({
 }: Download2Props) => {
   return (
     <section className="bg-muted py-32">
-      <div className="flex flex-col justify-center px-6 lg:px-8 max-w-(--breakpoint-xl) mx-auto gap-16">
+      <div className="flex flex-col justify-center font-roboto px-6 lg:px-8 max-w-(--breakpoint-xl) mx-auto gap-16">
         {/* Header Section */}
         <div className="max-w-2xl mx-auto text-center">
           <h2 className="mb-6 text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl">
