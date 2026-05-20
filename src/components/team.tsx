@@ -11,20 +11,28 @@ const teamMembers = [
     imageUrl: "/profiles/Darren.png",
     link: "https://www.linkedin.com/in/darren-harry-baine-84760a1b6/",
   },
-  {
-    name: "Felix Odong",
-    title: "Lead Mobile Developer",
-    bio: "Android app developer at IWIP",
-    imageUrl:
-      "/profiles/Felix.png",
-    link: "",
-  },
-  {
+    {
     name: "Daniel Nkurunziza",
     title: "Web Developer",
     bio: "Software with a Year in Industry",
     imageUrl: "/profiles/Daniel.png",
     link: "https://www.linkedin.com/in/daniel-nkurunziza/",
+  },
+    {
+    name: "Uday Seth",
+    title: "Head of Finance",
+    bio: "Financial Analyst",
+    imageUrl:
+      "/profiles/Uday.png",
+    link: "https://www.linkedin.com/in/uday-sheth-a31b25191/",
+  },
+    {
+    name: "Princess Mwebe",
+    title: "Head of Marketing",
+    bio: "Founder of YS Academy, Northeastern University Alumni",
+    imageUrl:
+      "/profiles/Princess.png",
+    link: "https://www.linkedin.com/in/princess-mwebe-3027aa257/",
   },
   {
     name: "Rene Baine",
@@ -34,34 +42,27 @@ const teamMembers = [
       "/profiles/Rene.png",
     link: "https://www.linkedin.com/in/ren%C3%A9-baine-9b6519319/",
   },
-  {
-    name: "Princess Mwebe",
-    title: "Head of Marketing",
-    bio: "Founder of YS Academy, Northeastern University Alumni",
+    {
+    name: "Felix Odong",
+    title: "Lead Mobile Developer",
+    bio: "Android app developer at IWIP",
     imageUrl:
-      "/profiles/Princess.png",
-    link: "https://www.linkedin.com/in/princess-mwebe-3027aa257/",
+      "/profiles/Felix.png",
+    link: "",
   },
-  {
-    name: "Uday Seth",
-    title: "Head of Finance",
-    bio: "Financial Analyst",
-    imageUrl:
-      "/profiles/Uday.png",
-    link: "https://www.linkedin.com/in/uday-sheth-a31b25191/",
-  },
+  
 ];
 
 const Team = () => {
   return (
-    <div className="flex flex-col justify-center py-8 sm:py-16 px-6 lg:px-8 max-w-(--breakpoint-xl) mx-auto gap-16">
+    <div className="flex flex-col justify-center py-8 sm:py-16 px-12 lg:px-8 max-w-(--breakpoint-lg) mx-auto gap-16">
       <div className="text-center max-w-2xl mx-auto">
-        <h2 className="mt-3 text-4xl sm:text-5xl font-bold tracking-tighter">
+        <h2 className="mt-3 text-xl sm:text-5xl font-roboto font-bold tracking-tighter">
           Meet Our Team
         </h2>
       </div>
 
-      <div className="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-10 gap-y-12">
+      <div className="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-x-10 gap-y-12">
         {teamMembers.map((member) => (
           <div
             key={member.name}
