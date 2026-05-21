@@ -2,6 +2,7 @@
 
 import { Check } from "lucide-react";
 import { useState } from "react";
+import { PageTransition } from "@/components/PageTransition";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
@@ -157,44 +158,46 @@ const Pricing = ({
   );
 
   return (
-    <section className={cn("w-full pt-32 py-32 bg-blue-800", className)}>
-      <div className="container mx-auto px-8">
-        <div className="flex flex-col gap-6">
-          <h2 className="text-4xl md:text-5xl font-black text-pretty lg:text-6xl font-raleway  text-white">
-            {title}
-          </h2>
-          <p className="max-w-3xl lg:text-xl font-semibold text-white">
-            {description}
-          </p>
-
-          {/* Community Section */}
+    <PageTransition>
+      <section className={cn("w-full pt-32 py-32 bg-blue-800 font-roboto", className)}>
+        <div className="container mx-auto px-8">
           <div className="flex flex-col gap-6">
-            <div className="flex flex-col justify-between gap-6 sm:flex-row sm:items-center">
-              <h2 className="text-3xl font-bold text-white">{subtitle}</h2>
-              {billingTabs}
-            </div>
-            <div className="flex w-full flex-col items-stretch gap-6 md:flex-row">
-              {plans.map((plan) => (
-                <PlanCard key={plan.name} plan={plan} />
-              ))}
-            </div>
-          </div>
+            <h2 className="text-4xl md:text-5xl font-black text-pretty lg:text-6xl font-raleway  text-white">
+              {title}
+            </h2>
+            <p className="max-w-3xl lg:text-xl font-semibold text-white">
+              {description}
+            </p>
 
-          {/* Individual Section */}
-          <div className="flex flex-col gap-6 mt-16">
-            <div className="flex flex-col justify-between gap-6 sm:flex-row sm:items-center">
-              <h2 className="text-3xl font-bold text-white">Individual</h2>
+            {/* Community Section */}
+            <div className="flex flex-col gap-6">
+              <div className="flex flex-col justify-between gap-6 sm:flex-row sm:items-center">
+                <h2 className="text-3xl font-bold text-white">{subtitle}</h2>
+                {billingTabs}
+              </div>
+              <div className="flex w-full flex-col items-stretch gap-6 md:flex-row">
+                {plans.map((plan) => (
+                  <PlanCard key={plan.name} plan={plan} />
+                ))}
+              </div>
             </div>
-            {/* Two cards, capped at md:w-2/3 so they don't stretch full width */}
-            <div className="flex w-full flex-col items-stretch gap-6 md:flex-row md:w-2/3">
-              {individualPlans.map((plan) => (
-                <PlanCard key={plan.name} plan={plan} />
-              ))}
+
+            {/* Individual Section */}
+            <div className="flex flex-col gap-6 mt-16">
+              <div className="flex flex-col justify-between gap-6 sm:flex-row sm:items-center">
+                <h2 className="text-3xl font-bold text-white">Individual</h2>
+              </div>
+              {/* Two cards, capped at md:w-2/3 so they don't stretch full width */}
+              <div className="flex w-full flex-col items-stretch gap-6 md:flex-row md:w-2/3">
+                {individualPlans.map((plan) => (
+                  <PlanCard key={plan.name} plan={plan} />
+                ))}
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </PageTransition>
   );
 };
 

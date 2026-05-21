@@ -71,8 +71,9 @@ const footerSections = [
 
 const Footer = () => {
   return (
-    <div className="bg-secondary">
-      <div className="flex flex-col bg-primary text-white font-roboto rounded-t-4xl px-6 py-6 lg:px-8  mx-auto ">
+    
+    <div className="bg-secondary h-8">
+      <div className="flex flex-col bg-primary text-white font-roboto px-6 py-6 lg:px-8  mx-auto ">
         <div className="grow max-w-(--breakpoint-xl)" />
         <footer className="border-none">
           <div className="max-w-(--breakpoint-xl) mx-auto ">
