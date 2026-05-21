@@ -69,9 +69,10 @@ export default function TermsOfService() {
       {/* Hero */}
       <div className="bg-blue-800 pt-38 pb-24 px-6 font-roboto">
         <div className="container flex-col items-left space-y-3.5 lg:my-0 lg:flex-row lg:justify- lg:gap-8 mx-auto max-w-7xl lg:px-24 text-white">
-          <h1 className="text-5xl font-bold tracking-tight md:text-6xl lg:text-6xl md:p-0 lg:items-start gap-5 lg:flex-1">
+          <h1 className="text-4xl font-bold tracking-tight md:text-6xl lg:text-6xl md:p-0 lg:items-start gap-5 lg:flex-1">
             Terms of Service
           </h1>
+          <p>Last Updated: May 2026</p>
         </div>
       </div>
 
@@ -81,20 +82,20 @@ export default function TermsOfService() {
           <div className="container">
             <div className="mx-auto max-w-3xl space-y-8 text-left">
               <p className="text-muted-foreground text-lg leading-7">
-                Last Updated: May 2026
+                The information provided by Inspired Work in Progress
+                (&quot;IWIP&quot;) on our website and through our services is
+                for general informational purposes only. All information is
+                provided in good faith; however, we make no representation or
+                warranty of any kind, express or implied, regarding the
+                accuracy, adequacy, validity, reliability, availability, or
+                completeness of any information provided.
               </p>
               <p className="text-muted-foreground text-lg leading-7">
-                The information provided by Inspired Work in Progress (&quot;IWIP&quot;) on our
-                website and through our services is for general informational purposes only.
-                All information is provided in good faith; however, we make no representation
-                or warranty of any kind, express or implied, regarding the accuracy, adequacy,
-                validity, reliability, availability, or completeness of any information provided.
-              </p>
-              <p className="text-muted-foreground text-lg leading-7">
-                Under no circumstance shall we have any liability to you for any loss or damage
-                of any kind incurred as a result of the use of our website or reliance on any
-                information provided. Your use of our services and your reliance on any
-                information is solely at your own risk.
+                Under no circumstance shall we have any liability to you for any
+                loss or damage of any kind incurred as a result of the use of
+                our website or reliance on any information provided. Your use of
+                our services and your reliance on any information is solely at
+                your own risk.
               </p>
             </div>
           </div>
@@ -106,14 +107,21 @@ export default function TermsOfService() {
             <div className="mx-auto max-w-3xl space-y-8">
               {sections.map((section) => (
                 <div key={section.title}>
-                  <h3 className="text-2xl font-semibold pb-3">{section.title}</h3>
-                  <p className="text-muted-foreground leading-7">{section.content}</p>
+                  <h3 className="text-2xl font-semibold pb-3">
+                    {section.title}
+                  </h3>
+                  <p className="text-muted-foreground leading-7">
+                    {section.content}
+                  </p>
                 </div>
               ))}
               <p className="text-muted-foreground leading-7 italic">
                 For questions regarding these Terms of Service, please contact{" "}
-                <a href="mailto:iwip@gmail.com" className="underline">iwip@gmail.com</a>.
-                This email address may be updated from time to time within the Application.
+                <a href="mailto:iwip@gmail.com" className="underline text-blue-600">
+                  iwip@gmail.com
+                </a>
+                . This email address may be updated from time to time within the
+                Application.
               </p>
             </div>
           </div>
