@@ -1,6 +1,6 @@
 import { Separator } from "@/components/ui/separator";
 import Link from "next/link";
-import { Logo } from "./navigation/logo";
+import Image from "next/image";
 
 const footerSections = [
   {
@@ -11,8 +11,8 @@ const footerSections = [
         href: "/about",
       },
       {
-        title:"Pricing",
-        href:"/pricing",
+        title: "Pricing",
+        href: "/pricing",
       },
       {
         title: "Events",
@@ -63,25 +63,36 @@ const footerSections = [
       },
       {
         title: "Terms of service",
-        href: "/terms-of-service"
-      }
+        href: "/terms-of-service",
+      },
     ],
   },
 ];
 
 const Footer = () => {
   return (
-    <div className="flex flex-col bg-primary text-white">
-      <div className="grow" />
-      <footer className="border-t">
-        <div className="max-w-(--breakpoint-xl) mx-auto">
+    <div className="flex flex-col bg-primary text-white font-roboto rounded-t-4xl px-6 py-6 lg:px-8  mx-auto ">
+      <div className="grow max-w-(--breakpoint-xl)" />
+      <footer className="border-none">
+        <div className="max-w-(--breakpoint-xl) mx-auto ">
           <div className="py-12 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-7 gap-x-8 gap-y-10 px-6 xl:px-0">
             <div className="col-span-full xl:col-span-3">
               {/* Logo */}
-              <Logo />
+              <Link href="/">
+                <Image
+                  src="/footer.svg"
+                  alt="Logo"
+                  width={256}
+                  height={256}
+                  className="h-12 w-auto"
+                />
+              </Link>
 
-              <p className="mt-4 text-white">
-                Designed to empower young people by fostering the right mindset, building leadership skills, and nurturing entrepreneurial thinking to help them unlock their potential and shape their future
+              <p className="mt-4 text-white max-w-2xl">
+                Designed to empower young people by fostering the right mindset,
+                building leadership skills, and nurturing entrepreneurial
+                thinking to help them unlock their potential and shape their
+                future
               </p>
             </div>
 
@@ -109,13 +120,9 @@ const Footer = () => {
           <div className="py-8 flex flex-col-reverse sm:flex-row items-center justify-between gap-x-2 gap-y-5 px-6 xl:px-0">
             {/* Copyright */}
             <span className="text-white">
-              &copy; {new Date().getFullYear()}{" "}
-              <Link href="/">
-                IWIP
-              </Link>
-              . All rights reserved.
+              &copy; {new Date().getFullYear()} <Link href="/">IWIP</Link>. All
+              rights reserved.
             </span>
-
           </div>
         </div>
       </footer>
