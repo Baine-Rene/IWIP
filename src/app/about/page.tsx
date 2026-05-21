@@ -3,11 +3,11 @@ export default function Home() {
   return (
     <>
     <PageTransition>
-      <section className="bg-secondary pb-18">
+      <section className="bg-secondary pb-18 font-roboto">
         {/* Full Width Hero */}
         <div className="bg-blue-800 pt-38 pb-24 px-6">
           <div className="container flex flex-col items-left lg:my-0 lg:flex-row lg:justify-center lg:gap-8 mx-auto max-w-7xl lg:px-24 text-white">
-            <h1 className="text-5xl font-bold tracking-tight md:text-5xl lg:text-6xl md:p-0 px-10  lg:items-start gap-5 lg:flex-1">
+            <h1 className="text-4xl font-bold tracking-tight md:text-6xl lg:text-6xl md:p-0 lg:items-start gap-5 lg:flex-1">
               About us
             </h1>
           </div>
@@ -33,7 +33,7 @@ export default function Home() {
             <div className="container">
               <div className="mx-auto max-w-3xl">
                 <h2 className="text-3xl font-bold pb-5" >What we do</h2>
-                <ul className="list-disc list-inside">
+                <ul className="list-disc list-inside text-muted-foreground">
                   <li>All Links in One Place: From LinkedIn to Instagram, from your website to portfolio—bring all your important links into one professional hub.</li>
                   <li>Authenticity: We foster genuine connections based on trust and mutual respect.</li>
                   <li>Document Uploads: Showcase resumes, pitch decks, portfolios, or presentations directly on your profile.</li>
@@ -41,12 +41,12 @@ export default function Home() {
                 </ul>
 
                 <h2 className="text-3xl font-bold py-5" >Our Mission</h2>
-                <p>To redefine networking by making it smarter, more human, and more impactful, so that every connection can lead to real opportunities.</p>
+                <p className="text-muted-foreground">To redefine networking by making it smarter, more human, and more impactful, so that every connection can lead to real opportunities.</p>
                 <h2 className="text-3xl font-bold py-5" >Our Vision</h2>
-                <p>Build authentic, lasting connections by combining simplicity, personalization, and technology.</p>
+                <p className="text-muted-foreground">Build authentic, lasting connections by combining simplicity, personalization, and technology.</p>
 
                 <h2 className="text-2xl font-semibold py-5">Our Values</h2>
-                <ul className="list-disc list-inside">
+                <ul className="list-disc list-inside text-muted-foreground">
                   <li>Inclusivity: We welcome professionals from all backgrounds, industries, and career stages.</li>
                   <li>Authenticity: We foster genuine connections based on trust and mutual respect.</li>
                   <li>Collaboration: We encourage knowledge sharing and partnerships that lead to innovative solutions.</li>
@@ -54,7 +54,7 @@ export default function Home() {
                 </ul>
 
                 <h2 className="text-2xl font-semibold py-5" >What we offer</h2>
-                <ul className="list-disc list-inside">
+                <ul className="list-disc list-inside text-muted-foreground">
                   <li>Networking opportunities with professionals across various industries</li>
                   <li>Virtual and in-person events designed to foster meaningful connections</li>
                   <li>Resources and tools to enhance your professional development</li>
