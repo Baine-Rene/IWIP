@@ -5,6 +5,7 @@ import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import Navbar from "@/components/navigation/navigation";
 import Footer from "@/components/footer";
+import Preloader from "@/components/Preloader";
 import { PageTransition } from "@/components/PageTransition";
 
 const geistSans = Geist({
