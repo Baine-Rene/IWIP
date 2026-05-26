@@ -1,4 +1,6 @@
+"use client";
 import Image from "next/image";
+import { easeIn, motion } from "framer-motion";
 
 const features = [
   {
@@ -25,9 +27,14 @@ const Features = () => {
   return (
     <div className="bg-brand-blue min-h-screen flex items-center justify-center py-10 px-6">
       <div className="grow w-full sm:max-w-(--breakpoint-md) lg:max-w-(--breakpoint-lg)">
-        <h2 className="text-4xl sm:text-5xl md:text-5xl font-bold font-roboto tracking-tight">
+        <motion.h2 
+        initial={{opacity: 0, y: 80}}
+        whileInView={{opacity:1, y:0}}
+        viewport={{once: true, margin: "-50px"}}
+        transition={{duration: 0.6, ease: "easeOut"}}
+        className="text-4xl sm:text-5xl md:text-5xl font-bold font-roboto tracking-tight">
           Powered by the Young Eye tech
-        </h2>
+        </motion.h2>
         <div className="w-full mt-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-12">
           {features.map((feature) => (
             <div
