@@ -91,7 +91,6 @@ const Pricing = ({
       yearlyPrice: "$21",
       features: [
         "Unlimited Document Uploads",
-        "Custom QR designs",
         "Profile Insights",
         "Export Network",
       ],
