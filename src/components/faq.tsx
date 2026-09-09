@@ -35,7 +35,7 @@ const faq: Array<{ question: string; answer: string; listItems?: string[] }> = [
 
 const FAQ = () => {
   return (
-    <div className="bg-primary min-h-screen sm:py-16 px-12 lg:px-8 flex items-center justify-center px-5 py-12">
+    <div className="min-h-screen sm:py-16 px-12 lg:px-8 flex items-center justify-center px-5 py-12 bg-blue-800">
       <div className="w-full max-w-3xl font-roboto">
         <h2 className="text-4xl sm:text-5xl md:text-5xl leading-[1.15]! font-bold  tracking-tighter text-white">
           Frequently Asked Questions
@@ -47,7 +47,7 @@ const FAQ = () => {
         <Accordion
           type="single"
           collapsible
-          className="mt-8 sm:mt-10 space-y-4"
+          className=" mt-8 sm:mt-10 space-y-4"
           defaultValue="question-0"
         >
           {faq.map(({ question, answer }, index) => (
