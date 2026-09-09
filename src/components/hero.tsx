@@ -89,7 +89,7 @@ const Hero = ({
   }, [heading]);
 
   return (
-    <section className="w-full overflow-x-hidden pt-32 bg-primary py-12">
+    <section className="w-full overflow-x-hidden pt-32 bg-primary py-12 rounded-b-4xl">
       <div className="container flex flex-col items-center lg:my-0 lg:flex-row lg:justify-center lg:gap-8 mx-auto max-w-7xl lg:px-24">
         <div className="flex flex-col items-center md:p-0 px-10 lg:items-start gap-5 lg:flex-1">
           <motion.div
@@ -117,7 +117,7 @@ const Hero = ({
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut", delay: 0.9 }}
-            className="text-lg md:text-xl font-medium leading-relaxed tracking-tight text-white max-w-2xl text-center lg:text-left"
+            className="text-lg md:text-xl font-medium leading-relaxed tracking-tight text-neutral-400 max-w-2xl text-center lg:text-left"
           >
             {description}
           </motion.p>
@@ -132,7 +132,7 @@ const Hero = ({
             }}
             className="flex flex-wrap items-start gap-5 lg:gap-7"
           >
-            <Button asChild className="bg-blue-700 hover:bg-blue-900 font-bold">
+            <Button asChild className="bg-blue-700 hover:bg-blue-900 font-bold rounded-full">
               <a href={buttons.primary?.url} target="_blank">
                 <span className="pr-4 pl-4 text-sm lg:pr-2 lg:pl-5 lg:text-base">
                   {buttons.primary?.text}
